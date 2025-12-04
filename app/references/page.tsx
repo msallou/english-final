@@ -1,89 +1,111 @@
 import { BookOpen, FileText, Mail, MessageSquare } from 'lucide-react';
+import Link from 'next/link';
 
 const References = () => {
   const scholarlyReferences = [
     {
-      title: 'The application of artificial intelligence technology in the tactical training of football robot',
-      authors: 'Chen, X., & Wang, Y.',
-      journal: 'Journal of Intelligent & Fuzzy Systems',
-      year: '2021',
-      description: 'Examines the Performance-Focused Strategic Training Module (PFSTM) achieving 95% predictive accuracy in identifying individual "lagging features" for targeted practice.',
+      title: 'Performance and Healthcare Analysis in Elite Sports Teams Using Artificial Intelligence: A Scoping Review',
+      authors: 'Munoz-Macho, A. A., et al.',
+      journal: 'Frontiers in Sports and Active Living',
+      year: '2024',
+      description:
+        'Scoping review confirming that AI and ML are primarily used for performance enhancement and injury prevention in elite sports through predictive modeling and athlete-health analytics.',
       type: 'Scholarly',
+      link: 'https://doi.org/10.3389/fspor.2024.1383723',
+    },
+    {
+      title: 'Can Artificial Intelligence Revolutionize Soccer Tactical Analysis?',
+      authors: 'Plakias, S., et al.',
+      journal: 'TSS Journal',
+      year: '2024',
+      description:
+        'Academic review explaining how AI is redefining tactical analysis through predictive analytics and spatial-tracking systems that support coaching strategy and performance optimization.',
+      type: 'Scholarly',
+      link: 'https://doi.org/10.23829/TSS.2024.31.3-3',
+    },
+    {
+      title: 'The Application of Artificial Intelligence Technology in the Tactical Training of Football Players',
+      authors: 'Liu, C., & Liu, H.',
+      journal: 'Entertainment Computing',
+      year: '2024',
+      description:
+        'Presents the PFSTM training module using a concatenated learning network to identify players’ lagging features and improve tactical awareness with a predictive accuracy of 95 percent.',
+      type: 'Scholarly',
+      link: 'https://doi.org/10.1016/j.entcom.2024.100913',
     },
     {
       title: 'The Application of Artificial Intelligence in Football Risk Prediction',
       authors: 'Zhang, L., et al.',
-      journal: 'IEEE Access',
-      year: '2022',
-      description: 'Details the ANN model processing Wireless Sensor Network data (GPS, heart rate, acceleration) to achieve 99.6% precision in predicting knee injury risk.',
+      journal: 'PMC Research Article (ANN and WSN model)',
+      year: '2025',
+      description:
+        'Demonstrates an ANN-WSN system that predicts injury risk using wearable sensor data, achieving 99.6 percent precision for early detection of high-risk conditions.',
       type: 'Scholarly',
-    },
-    {
-      title: 'Performance and healthcare analysis in elite soccer via machine learning',
-      authors: 'Rodriguez, M., & Silva, J.',
-      journal: 'Sports Medicine',
-      year: '2023',
-      description: 'Explores multifactorial health monitoring involving load control, biomechanical analysis, and integration of internal physiological markers.',
-      type: 'Scholarly',
-    },
-    {
-      title: 'Can artificial intelligence revolutionize soccer tactical analysis?',
-      authors: 'Thompson, R., & Martinez, A.',
-      journal: 'International Journal of Sports Science',
-      year: '2023',
-      description: 'Discusses machine learning models and neural networks for predicting pass probabilities and analyzing complex player movement for strategic formulation.',
-      type: 'Scholarly',
+      link: 'http://orbiscascade-washington.primo.exlibrisgroup.com/discovery/fulldisplay?context=PC&vid=01ALLIANCE_UW:UW&search_scope=UW_EVERYTHING&tab=UW_default&docid=cdi_pubmedcentral_primary_oai_pubmedcentral_nih_gov_9208919',
     },
   ];
 
+
   const popularReferences = [
     {
-      title: 'AI Is Changing Soccer Analysis. Now Comes the Hard Part',
-      source: 'Wired',
-      author: 'Various',
-      year: '2023',
-      description: 'Covers the shift from traditional GPS to deep tech computer vision, capturing 50+ body points at millimeter level for posture correction.',
-      type: 'Popular',
-    },
-    {
-      title: 'Soccer looks to AI for an edge in predicting and preventing injuries',
-      source: 'TechCrunch',
-      author: 'Various',
-      year: '2023',
-      description: 'Describes Zone7\'s deep learning system and the Getafe case study achieving 66% reduction in non-contact injuries.',
-      type: 'Popular',
-    },
-    {
-      title: 'Top 10 Ways AI is Revolutionizing Player Scouting and Recruitment',
-      source: 'SportsTech Magazine',
-      author: 'Various',
+      title: 'AI in Sports: Transforming Fan Experience and Team Strategy',
+      source: 'American Military University',
+      author: 'Dr Brittany Jacobs',
       year: '2024',
-      description: 'Outlines modern comprehensive scouting across physical, technical, tactical, and psychological dimensions using AI.',
+      description:
+        'Explains how AI is reshaping performance analysis, officiating, stadium security, and fan engagement across the global sports industry.',
       type: 'Popular',
+      link: 'http://www.amu.apus.edu/area-of-study/health-sciences/resources/ai-in-sports',
     },
     {
-      title: 'How AI-powered recruiting helps Spain\'s leading soccer team score',
-      source: 'MIT Technology Review',
-      author: 'Various',
-      year: '2023',
-      description: 'Details Sevilla FC\'s "Scout Advisor" using Natural Language Processing to analyze 200,000+ qualitative scout reports.',
+      title: 'Soccer Looks to AI for an Edge: Could an Algorithm Really Predict Injuries?',
+      source: 'ESPN',
+      author: 'Mark Ogden',
+      year: '2021',
+      description:
+        'Covers real-world adoption of injury-risk AI systems such as Zone7, including Getafe’s reported 66 percent reduction in non-contact injuries.',
       type: 'Popular',
+      link: 'http://www.espn.com/soccer/story/_/id/37613690/algorithm-really-predict-injuries',
+    },
+    {
+      title: 'AI Is Changing Soccer Analysis — How We Watch the Game Could Be Next',
+      source: 'Forbes',
+      author: 'Robert Kidd',
+      year: '2025',
+      description:
+        'Discusses how 3D computer vision tech captures millimeter-level movement data and is set to transform both elite performance and fan experience.',
+      type: 'Popular',
+      link: 'http://www.forbes.com/sites/robertkidd/2025/06/10/ai-is-changing-soccer-analysis---how-we-watch-the-game-could-be-next',
+    },
+    {
+      title: 'How AI-Powered Recruiting Helps Spain’s Leading Soccer Team Score',
+      source: 'IBM Case Study',
+      author: 'Jessica Gordon',
+      year: '2025',
+      description:
+        'Details Sevilla FC’s use of watsonx Scout Advisor and NLP to analyze more than 200,000 qualitative scouting reports for improved recruitment decisions.',
+      type: 'Popular',
+      link: 'http://www.ibm.com/case-studies/blog/watsonx-scout-advisor-fc-sevilla',
+    },
+    {
+      title: 'Top 10 Ways AI Is Revolutionizing Player Scouting and Recruitment',
+      source: 'Playbook Sports',
+      author: 'Playbook Staff',
+      year: '2025',
+      description:
+        'Breaks down how AI transforms scouting through predictive analytics, psychological profiling, development planning, and data-driven recruitment pipelines.',
+      type: 'Popular',
+      link: 'http://www.callplaybook.com/reports/top-10-ai-scouting-and-recruitment',
     },
     {
       title: 'Risks and Benefits of AI Use in Football',
-      source: 'Sports Ethics Journal',
+      source: 'Sports Ethics Journal / FC Data Ethics Report',
       author: 'Various',
       year: '2024',
-      description: 'Examines the black box problem, algorithmic bias, and risks of unfair career decisions based on unpredictable AI conclusions.',
+      description:
+        'Examines the ethical issues in AI deployment including data privacy, algorithmic bias, opaque decision systems, and career-impact risks.',
       type: 'Popular',
-    },
-    {
-      title: 'The EU Artificial Intelligence Act: What Football Clubs Need to Know',
-      source: 'Legal Sports Review',
-      author: 'Various',
-      year: '2024',
-      description: 'Covers the EU AI Act, high-risk system classification, €35 million penalties, and mandatory human oversight requirements.',
-      type: 'Popular',
+      link: 'http://barcainnovationhub.fcbarcelona.com/blog/risks-and-benefits-of-ai-use-in-football',
     },
   ];
 
@@ -140,8 +162,9 @@ const References = () => {
                       {ref.type}
                     </span>
                   </div>
-
-                  <h3 className="text-xl font-bold mb-3 text-blue-400">{ref.title}</h3>
+                  <Link href={ref.link} target="_blank" rel="noopener noreferrer">
+                    <h3 className="text-xl font-bold mb-3 text-blue-400 underline underline-offset-3">{ref.title}</h3>
+                  </Link>
 
                   <div className="text-sm text-gray-400 mb-4">
                     <span className="font-semibold">{ref.authors}</span> • {ref.journal} • {ref.year}
@@ -172,8 +195,9 @@ const References = () => {
                       {ref.type}
                     </span>
                   </div>
-
-                  <h3 className="text-xl font-bold mb-3 text-purple-400">{ref.title}</h3>
+                  <Link href={ref.link} target="_blank" rel="noopener noreferrer">
+                    <h3 className="text-xl font-bold mb-3 text-purple-400 underline underline-offset-3">{ref.title}</h3>
+                  </Link>
 
                   <div className="text-sm text-gray-400 mb-4">
                     <span className="font-semibold">{ref.source}</span> • {ref.year}
@@ -182,31 +206,6 @@ const References = () => {
                   <p className="text-gray-300 leading-relaxed">{ref.description}</p>
                 </div>
               ))}
-            </div>
-          </div>
-
-          <div className="bg-linear-to-r from-cyan-900/30 to-blue-900/30 border border-cyan-500/30 rounded-xl p-12">
-            <h2 className="text-3xl font-bold mb-6 text-center">Contact & Inquiries</h2>
-
-            <p className="text-center text-gray-300 mb-8 max-w-2xl mx-auto leading-relaxed">
-              For questions about the research, additional sources, or collaboration opportunities, please reach out
-              through any of the channels below.
-            </p>
-
-            <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
-              <div className="bg-gray-900/50 rounded-xl p-6 text-center">
-                <Mail className="mx-auto mb-3 text-cyan-400" size={32} />
-                <h3 className="font-bold text-gray-200 mb-2">Email</h3>
-                <a href="mailto:info@futbol-ai.com" className="text-cyan-400 hover:text-cyan-300 transition-colors">
-                  info@futbol-ai.com
-                </a>
-              </div>
-
-              <div className="bg-gray-900/50 rounded-xl p-6 text-center">
-                <MessageSquare className="mx-auto mb-3 text-blue-400" size={32} />
-                <h3 className="font-bold text-gray-200 mb-2">Discussion</h3>
-                <p className="text-gray-400 text-sm">Join the conversation on our social channels</p>
-              </div>
             </div>
           </div>
         </div>
