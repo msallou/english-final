@@ -1,47 +1,59 @@
 'use client'
 
 import { ChevronRight, TrendingUp, Heart, Users, Scale, ArrowRight } from 'lucide-react';
+import Link from 'next/link';
 
 export default function Home() {
+  // Mapping Source names for citation
+  const sourceMapping = {
+    Liu: "Liu and Liu",
+    Ogden: "Ogden (ESPN)",
+    Gordon: "Gordon (IBM)",
+    FCB: "FCBarcelona.com",
+    Kidd: "Kidd",
+    Jacobs: "Jacobs",
+    Qiao: "Qiao",
+  };
+
   const pillars = [
     {
       id: 'performance',
       icon: TrendingUp,
       title: 'Performance & Training',
-      description: 'Precision tracking beyond the naked eye with 3D computer vision capturing 50+ body points at millimeter level.',
+      description: `Precision tracking beyond the naked eye with 3D computer vision capturing 50+ body points at centimeter-level (Kidd).`,
       color: 'from-cyan-500 to-blue-500',
       stat: '95%',
-      statLabel: 'Predictive Accuracy',
+      statLabel: `Skill Accuracy (Liu and Liu)`,
       url: '/performance',
     },
     {
       id: 'health',
       icon: Heart,
       title: 'Health & Safety',
-      description: 'Predictive injury modeling using deep learning. Getafe achieved a 66% reduction in non-contact injuries.',
+      description: `Predictive injury modeling using deep learning. Getafe achieved a 66% reduction in non-contact injuries (Ogden (ESPN)).`,
       color: 'from-green-500 to-emerald-500',
       stat: '99.6%',
-      statLabel: 'Injury Prediction Precision',
+      statLabel: `Prediction Precision (Qiao)`,
       url: '/health',
     },
     {
       id: 'strategy',
       icon: Users,
       title: 'Strategy & Recruitment',
-      description: 'AI-powered scouting analyzing 200,000+ qualitative reports to identify undervalued players and optimize transfers.',
+      description: `AI-powered scouting analyzing 200,000+ qualitative reports using NLP to identify undervalued players (Gordon (IBM)).`,
       color: 'from-blue-500 to-purple-500',
       stat: '200K+',
-      statLabel: 'Reports Analyzed',
+      statLabel: `Reports Analyzed (Gordon (IBM))`,
       url: '/strategy',
     },
     {
       id: 'ethics',
       icon: Scale,
       title: 'Ethics & Regulation',
-      description: 'Addressing the black box problem and ensuring compliance with EU AI Act regulations and human oversight requirements.',
+      description: `Addressing the black box problem and ensuring compliance with EU AI Act regulations, including human oversight (FCBarcelona.com).`,
       color: 'from-orange-500 to-red-500',
       stat: '€35M',
-      statLabel: 'Max Non-Compliance Penalty',
+      statLabel: `Max Non-Compliance Penalty (FCBarcelona.com)`,
       url: '/ethics',
     },
   ];
@@ -74,10 +86,7 @@ export default function Home() {
 
           <div className="prose prose-invert prose-lg max-w-4xl mx-auto mb-12">
             <p className="text-gray-400 leading-relaxed">
-              Artificial intelligence is revolutionizing professional football through unprecedented data analysis,
-              predictive modeling, and strategic optimization. This transformation spans player performance enhancement,
-              injury prevention, recruitment efficiency, and tactical innovation—while raising critical ethical questions
-              about bias, transparency, and regulatory compliance.
+              Artificial Intelligence is fundamentally and irrevocably transforming elite soccer by enabling unprecedented data-driven improvements in player performance [Liu and Liu; Munoz-Macho et al.], significantly enhancing injury prediction and prevention [Ogden (ESPN); Qiao], and revolutionizing off-field strategic decisions like recruitment [Gordon (IBM); Playbook Sports]; however, the successful implementation of this technology requires rigorous attention to ethical considerations, including data privacy and algorithmic bias [FCBarcelona.com].
             </p>
           </div>
 
@@ -100,7 +109,7 @@ export default function Home() {
               </span>
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              The financial stakes are unprecedented
+              The immense economic stakes underscore the necessity of adopting cutting-edge analytical tools (Jacobs).
             </p>
           </div>
 
@@ -109,8 +118,8 @@ export default function Home() {
               <div className="text-5xl font-bold bg-linear-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent mb-2">
                 $2.2B
               </div>
-              <div className="text-gray-400 text-sm uppercase tracking-wider mb-4">2023 Market Value</div>
-              <p className="text-gray-500 text-sm">Current AI sports analytics market valuation</p>
+              <div className="text-gray-400 text-sm uppercase tracking-wider mb-4">2022 Market Value</div>
+              <p className="text-gray-500 text-sm">Current AI sports analytics market valuation (Jacobs).</p>
             </div>
 
             <div className="bg-linear-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700/50 hover:border-blue-500/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/20">
@@ -118,7 +127,7 @@ export default function Home() {
                 $29.7B
               </div>
               <div className="text-gray-400 text-sm uppercase tracking-wider mb-4">2032 Projection</div>
-              <p className="text-gray-500 text-sm">Expected market growth over the next decade</p>
+              <p className="text-gray-500 text-sm">Expected market growth over the next decade (Jacobs).</p>
             </div>
 
             <div className="bg-linear-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700/50 hover:border-purple-500/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/20">
@@ -126,7 +135,7 @@ export default function Home() {
                 1250%
               </div>
               <div className="text-gray-400 text-sm uppercase tracking-wider mb-4">Growth Rate</div>
-              <p className="text-gray-500 text-sm">Exponential expansion of AI implementation</p>
+              <p className="text-gray-500 text-sm">Exponential expansion of AI implementation, fueled by technology adoption (Jacobs).</p>
             </div>
           </div>
 
@@ -136,16 +145,17 @@ export default function Home() {
                 <h3 className="text-2xl font-bold text-green-400 mb-3">Featured Case Study</h3>
                 <p className="text-gray-300 text-lg leading-relaxed">
                   How Getafe slashed non-contact injuries by <span className="text-green-400 font-bold">66%</span> using
-                  data science and predictive AI modeling
+                  data science and predictive AI modeling [Ogden (ESPN)].
                 </p>
               </div>
-              <button
-                onClick={() => window.location.href = '/health'}
+              
+              <Link
+                href="/health"
                 className="group flex items-center space-x-2 px-6 py-3 bg-green-500 hover:bg-green-400 rounded-lg font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-green-500/50"
               >
                 <span>Read More</span>
                 <ArrowRight className="group-hover:translate-x-1 transition-transform" size={20} />
-              </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -166,11 +176,11 @@ export default function Home() {
             {pillars.map((pillar, index) => {
               const Icon = pillar.icon;
               return (
-                <div
+                <Link
                   key={pillar.id}
                   className={`group relative bg-linear-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700/50 hover:border-opacity-100 transition-all duration-500 hover:scale-105 hover:shadow-2xl cursor-pointer animate-fade-in`}
                   style={{ animationDelay: `${index * 100}ms` }}
-                  onClick={() => window.location.href = pillar.url}
+                  href={pillar.url}
                 >
                   <div className={`absolute inset-0 bg-linear-to-br ${pillar.color} opacity-0 group-hover:opacity-10 rounded-xl transition-opacity duration-500`} />
 
@@ -178,7 +188,7 @@ export default function Home() {
                     <Icon size={32} className="text-white" />
                   </div>
 
-                  <h3 className="text-2xl font-bold mb-4 group-hover:text-transparent group-hover:bg-linear-to-r group-hover:bg-clip-text" style={{
+                  <h3 className="text-2xl font-bold mb-4 group-hover:bg-linear-to-r group-hover:bg-clip-text" style={{
                     backgroundImage: `linear-gradient(to right, var(--tw-gradient-stops))`,
                   }}>
                     {pillar.title}
@@ -197,7 +207,7 @@ export default function Home() {
                     </div>
                     <ChevronRight className="text-gray-500 group-hover:text-cyan-400 group-hover:translate-x-2 transition-all duration-300" size={24} />
                   </div>
-                </div>
+                </Link>
               );
             })}
           </div>
@@ -205,4 +215,4 @@ export default function Home() {
       </section>
     </div>
   );
-};
+}
