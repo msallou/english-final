@@ -57,7 +57,7 @@ const Strategy = () => {
           </div>
 
           <div className="grid md:grid-cols-4 gap-6 mb-20">
-            {statData.map((stat, index) => (
+            {statData.map((stat) => (
               <div
                 key={stat.label}
                 className="bg-linear-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700/50 hover:border-blue-500/50 transition-all duration-500 hover:scale-105"
@@ -66,7 +66,7 @@ const Strategy = () => {
                   {stat.value}
                 </div>
                 <div className="text-sm font-semibold text-gray-300 mb-2">{stat.label}</div>
-                <div className="text-xs text-gray-500">{stat.sublabel} (Source: {stat.source})</div>
+                <div className="text-xs text-gray-500">{stat.sublabel} ({stat.source})</div>
               </div>
             ))}
           </div>
@@ -109,7 +109,7 @@ const Strategy = () => {
                       </li>
                     ))}
                   </ul>
-                  <div className="text-xs text-gray-500 mt-4">Source: {sourceMapping.Playbook}</div>
+                  <div className="text-xs text-gray-500 mt-4">({sourceMapping.Playbook})</div>
                 </div>
               );
             })}
