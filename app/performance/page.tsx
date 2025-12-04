@@ -1,45 +1,49 @@
-import { Activity, Target, Brain, Shield, Eye, Cpu } from 'lucide-react';
+import { Activity, Target, Brain, Eye, Cpu } from 'lucide-react';
 
 const Performance = () => {
+  // Mapping Source names to be used in the JSX (matching your annotated bibliography)
+  const sourceMapping = {
+    Kidd: "Kidd", // Source 3
+    'Liu & Liu': "Liu and Liu", // Source 9
+    'Plakias et al.': "Plakias et al.", // Source 8
+    Jacobs: "Jacobs", // Source 1
+    'Munoz et al.': "Munoz-Macho et al.", // Source 7
+  };
+
   const technologies = [
-    { name: '3D Computer Vision', value: '50+', label: 'Body Points Tracked' },
-    { name: 'ML Neural Networks', value: '95%', label: 'Prediction Accuracy' },
-    { name: 'Real-Time Analysis', value: '<100ms', label: 'Processing Latency' },
-    { name: 'Movement Tracking', value: 'mm', label: 'Precision Level' },
+    { name: '3D Vision Tracking', value: '50+', label: 'Body Points Captured', source: sourceMapping.Kidd },
+    { name: 'PFSTM Predictive Model', value: '95%', label: 'Skill Gain Accuracy', source: sourceMapping['Liu & Liu'] },
+    { name: 'Opponent Analysis Window', value: '3', label: 'Matches Scanned', source: sourceMapping.Kidd },
+    { name: 'Biomechanics Precision', value: '1 cm', label: 'Movement Resolution', source: sourceMapping.Kidd },
   ];
 
   const features = [
     {
       icon: Eye,
       title: 'Computer Vision Tracking',
-      description: 'Advanced 3D computer vision systems capture over 50 body points at millimeter-level precision, providing unprecedented insight into player movement, posture, and biomechanics.',
+      description: '3D tracking systems identify more than 50 anatomical landmarks per player, producing millimeter-level motion models. These datasets expose micro-faults in biomechanics that affect reaction time, recovery steps, and defensive orientation.',
       stat: '50+',
       statLabel: 'Body Points',
       color: 'from-cyan-500 to-blue-500',
+      source: sourceMapping.Kidd,
     },
     {
       icon: Brain,
       title: 'Neural Network Analysis',
-      description: 'Machine learning models analyze complex player movements to predict pass probabilities, identify tactical patterns, and optimize team formations in real-time.',
-      stat: '95%',
-      statLabel: 'Accuracy',
+      description: 'Neural networks segment player actions, predict passing lanes, and classify tactical structures with high precision. Modern AI surpasses human pattern recognition by quantifying spatial occupation and tactical valence in real time.',
+      stat: 'Deeper',
+      statLabel: 'Insights',
       color: 'from-blue-500 to-purple-500',
+      source: sourceMapping['Plakias et al.'],
     },
     {
       icon: Target,
       title: 'Personalized Training',
-      description: 'PFSTM (Performance-Focused Strategic Training Module) identifies individual "lagging features" to create customized training regimens that target specific skill gaps.',
-      stat: '100%',
-      statLabel: 'Customized',
-      color: 'from-purple-500 to-pink-500',
-    },
-    {
-      icon: Shield,
-      title: 'Officiating Technology',
-      description: 'AI-powered systems like Hawk-Eye, VAR, and Semi-Automated Offside Technology (SAOT) ensure fair play and accurate decision-making at the highest levels of competition.',
-      stat: '99.9%',
+      description: "Liu and Liu's PFSTM isolates “lagging features” using concatenated learning networks. The model raised strategic awareness and passing accuracy with a predictive reliability of 95 percent, verifying targeted training effectiveness.",
+      stat: '95%',
       statLabel: 'Accuracy',
-      color: 'from-green-500 to-emerald-500',
+      color: 'from-purple-500 to-pink-500',
+      source: sourceMapping['Liu & Liu'],
     },
   ];
 
@@ -60,7 +64,7 @@ const Performance = () => {
             </h1>
 
             <p className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
-              How AI provides precise data for skill optimization, tactical advantage, and on-field efficiency
+              The integration of Artificial Intelligence (AI) and Machine Learning (ML) fundamentally redefines performance analysis in elite soccer, ensuring player efficiency and competitive advantage.
             </p>
           </div>
 
@@ -75,7 +79,7 @@ const Performance = () => {
                   {tech.value}
                 </div>
                 <div className="text-sm text-gray-400 mb-1">{tech.label}</div>
-                <div className="text-xs text-gray-500">{tech.name}</div>
+                <div className="text-xs text-gray-500">{tech.name} ({tech.source})</div>
               </div>
             ))}
           </div>
@@ -87,7 +91,7 @@ const Performance = () => {
           <div className="mb-16">
             <h2 className="text-4xl font-bold mb-6 text-center">
               <span className="bg-linear-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-                Precision Tracking: Beyond the Naked Eye
+                Precision Tracking & Biomechanics
               </span>
             </h2>
           </div>
@@ -97,12 +101,10 @@ const Performance = () => {
               <div className="bg-linear-to-br from-cyan-900/30 to-blue-900/30 border border-cyan-500/30 rounded-xl p-8">
                 <h3 className="text-2xl font-bold text-cyan-400 mb-4">From GPS to Deep Tech</h3>
                 <p className="text-gray-300 leading-relaxed mb-4">
-                  Traditional GPS tracking has been revolutionized by advanced computer vision systems that provide
-                  millimeter-level precision across multiple dimensions.
+                  AI integration evolved from basic statistical analyses to complex predictive modeling and real-time decision-making systems, harnessing AI for performance analysis, biomechanics, and sports technique (Jacobs; Munoz-Macho et al.).
                 </p>
                 <p className="text-gray-400 leading-relaxed">
-                  Modern systems capture biomechanical data that was previously impossible to obtain, enabling coaches
-                  to identify and correct subtle technical flaws that impact performance.
+                  Data acquisition relies on tracking technologies like Global Positioning System (GPS) and Global Navigation Satellite System (GNSS) to monitor distances, speeds, decelerations, and accelerations constantly during training and matches (Munoz-Macho et al.). This continuous information helps precisely define what, when, and where actions occur (Munoz-Macho et al.).
                 </p>
               </div>
 
@@ -111,19 +113,19 @@ const Performance = () => {
                 <ul className="space-y-3">
                   <li className="flex items-start space-x-3">
                     <div className="w-2 h-2 rounded-full bg-cyan-400 mt-2" />
-                    <span className="text-gray-300">Posture correction and biomechanical optimization</span>
+                    <span className="text-gray-300">Micro-posture correction is used to gain valuable milliseconds in anticipation (Kidd).</span>
                   </li>
                   <li className="flex items-start space-x-3">
                     <div className="w-2 h-2 rounded-full bg-blue-400 mt-2" />
-                    <span className="text-gray-300">Sprint mechanics and acceleration analysis</span>
+                    <span className="text-gray-300">Predicting performance is achieved from anthropometric data and performance tests (Munoz-Macho et al.).</span>
                   </li>
                   <li className="flex items-start space-x-3">
                     <div className="w-2 h-2 rounded-full bg-purple-400 mt-2" />
-                    <span className="text-gray-300">Technical skill refinement through micro-analysis</span>
+                    <span className="text-gray-300">The utilization of Key Performance Indicators (KPIs) provides a nuanced understanding of physical demands on athletes (Munoz-Macho et al.).</span>
                   </li>
                   <li className="flex items-start space-x-3">
                     <div className="w-2 h-2 rounded-full bg-pink-400 mt-2" />
-                    <span className="text-gray-300">Movement pattern recognition and optimization</span>
+                    <span className="text-gray-300">AR/VR training tracks motion data, enabling players to practice against high-quality opponents (Jacobs).</span>
                   </li>
                 </ul>
               </div>
@@ -171,7 +173,7 @@ const Performance = () => {
 
                     <div className="md:col-span-7">
                       <h3 className="text-2xl font-bold mb-3">{feature.title}</h3>
-                      <p className="text-gray-400 leading-relaxed">{feature.description}</p>
+                      <p className="text-gray-400 leading-relaxed">{feature.description} ({feature.source}).</p>
                     </div>
 
                     <div className="md:col-span-3 text-center">
@@ -179,6 +181,7 @@ const Performance = () => {
                         {feature.stat}
                       </div>
                       <div className="text-sm text-gray-500 uppercase tracking-wider">{feature.statLabel}</div>
+                      <div className="text-xs text-gray-500">({feature.source})</div>
                     </div>
                   </div>
                 </div>
@@ -190,49 +193,52 @@ const Performance = () => {
 
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="bg-linear-to-r from-blue-900/30 to-purple-900/30 border border-blue-500/30 rounded-xl p-12">
+          <div className="bg-linear-to-r from-blue-900/30 to-purple-900/30 border border-blue-500/30 rounded-xl p-12 space-y-10">
             <h2 className="text-3xl font-bold mb-6 text-center">
               Tactical Intelligence and Real-Time Strategy
             </h2>
 
-            <div className="grid md:grid-cols-2 gap-8 mb-8">
+            <div className="grid md:grid-cols-2 gap-8">
               <div className="space-y-4">
-                <h3 className="text-xl font-bold text-blue-400">Machine Learning Models</h3>
+                <h3 className="text-xl font-bold text-blue-400">AI-Driven Game Planning and Analysis</h3>
                 <p className="text-gray-300 leading-relaxed">
-                  Neural networks process vast amounts of match data to identify tactical patterns, predict opponent
-                  strategies, and suggest optimal formations based on real-time game conditions.
+                  AI provides a comprehensive view of opponents’ strategies, strengths, and vulnerabilities (Plakias et al.), and AI efficiency enables deeper scrutiny of team behavior (Plakias et al.).
                 </p>
-                <div className="bg-gray-800/50 rounded-lg p-4">
-                  <div className="text-sm text-gray-400 mb-2">Example Applications:</div>
-                  <ul className="space-y-2 text-sm text-gray-300">
-                    <li>• Pass probability prediction</li>
-                    <li>• Defensive positioning optimization</li>
-                    <li>• Space utilization analysis</li>
-                    <li>• Player interaction modeling</li>
-                  </ul>
-                </div>
+                <ul className="space-y-2 text-sm text-gray-300 bg-gray-800/50 rounded-lg p-4">
+                  <li>AI tools allow coaches to study an opponent&apos;s past three matches to extract tendencies (Kidd).</li>
+                  <li>This intelligence is used to build decision-tree simulations that project the opponent&apos;s most probable responses and prescribe optimal counter-tactics (Kidd).</li>
+                  <li>ML algorithms expedite game footage review and aggregate hundreds of data points about player performance within minutes, vastly improving analysis efficiency (Jacobs).</li>
+                  <li>AI is integrated into training to improve decision-making capabilities and functional responsibilities (Liu and Liu).</li>
+                  <li>AI algorithms analyze gameplay data and optimize training methods, highlighting specific benefits in developing player skills and strategies (Liu and Liu).</li>
+                </ul>
               </div>
 
               <div className="space-y-4">
-                <h3 className="text-xl font-bold text-purple-400">Strategic Formulation</h3>
+                <h3 className="text-xl font-bold text-purple-400">In-Game and Wellness Optimization</h3>
                 <p className="text-gray-300 leading-relaxed">
-                  AI systems analyze complex player movements to formulate winning strategies, identifying weaknesses
-                  in opponent formations and suggesting tactical adjustments in real-time.
+                  The application of AI helps optimize player management to maintain peak condition and provide real-time competitive advantages.
                 </p>
-                <div className="bg-gray-800/50 rounded-lg p-4">
-                  <div className="text-sm text-gray-400 mb-2">Strategic Insights:</div>
-                  <ul className="space-y-2 text-sm text-gray-300">
-                    <li>• Opponent pattern recognition</li>
-                    <li>• Formation effectiveness metrics</li>
-                    <li>• Pressing trigger identification</li>
-                    <li>• Transition opportunity detection</li>
-                  </ul>
-                </div>
+                <ul className="space-y-2 text-sm text-gray-300 bg-gray-800/50 rounded-lg p-4">
+                  <li>AI and ML algorithms are used to predict performance and manage training load, which includes modeling complex systems like player wellness (Munoz-Macho et al.).</li>
+                  <li>The utilization of Key Performance Indicators (KPIs) provides a nuanced understanding of physical demands during training and matches (Munoz-Macho et al.).</li>
+                  <li>AI models support real-time decision-making, including providing early match forecasts to assist coaches in making well-informed substitution decisions (Munoz-Macho et al.).</li>
+                  <li>AI-enhanced equipment can track player movements, enabling coaches and staff to make faster strategy decisions based on trends (Jacobs).</li>
+                  <li>Training must ensure optimal performance without the risk of injury, using AI to determine when a player should engage in reduced or no-contact practices (Jacobs).</li>
+                  <li>AI can also help develop recommendations for player wellness, including trip planning and sleep management (Munoz-Macho et al.).</li>
+                </ul>
               </div>
             </div>
 
-            <div className="text-center text-gray-400 text-sm">
-              Source: Can artificial intelligence revolutionize soccer tactical analysis?
+            <div className="space-y-4">
+              <h3 className="text-xl font-bold text-cyan-400">AI Methodology in Performance Research</h3>
+              <p className="text-gray-300 leading-relaxed">
+                The core objective of Machine Learning (ML) is to enable machines to learn from data, thereby improving their performance on a given task without being explicitly programmed (Munoz-Macho et al.). Research validates that AI/ML is increasingly used in team sports (Munoz-Macho et al.).
+              </p>
+              <ul className="space-y-2 text-sm text-gray-300 bg-gray-800/50 rounded-lg p-4">
+                <li>Of the 32 articles reviewed in one study, 15 articles focused on performance improvement (Munoz-Macho et al.).</li>
+                <li>The most frequently used AI techniques include Tree-based methods (36%), Ada/XGBoost (19%), and Neural Networks (9%) (Munoz-Macho et al.).</li>
+                <li>AI is applied to achieve performance enhancement, technical and tactical support, and talent identification (Munoz-Macho et al.).</li>
+              </ul>
             </div>
           </div>
         </div>
