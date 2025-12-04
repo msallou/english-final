@@ -1,57 +1,72 @@
 import { Scale, AlertTriangle, Shield, Eye, FileCheck, Users } from 'lucide-react';
 
 const Ethics = () => {
+  // Mapping Source names (matching annotated bibliography)
+  const sourceMapping = {
+    FCB: "FCBarcelona.com", // Source 6
+  };
+
+  // RISKS (Derived from FCBarcelona.com)
   const risks = [
     {
-      title: 'Algorithmic Bias',
-      description: 'AI models trained on historical data may perpetuate existing biases, leading to unfair evaluation of players from underrepresented backgrounds.',
-      severity: 'Critical',
-      color: 'red',
+      title: 'Black Box Decision-Making',
+      description: 'The algorithms used are often so complex that it is difficult to interpret them, creating accountability challenges and making AI conclusions unpredictable.',
+      severity: 'High Risk',
+      color: 'orange',
+      source: sourceMapping.FCB,
     },
     {
-      title: 'Black Box Decision-Making',
-      description: 'Complex neural networks make decisions through processes that are difficult or impossible to explain, creating accountability challenges.',
-      severity: 'High',
-      color: 'orange',
+      title: 'Algorithmic Bias',
+      description: 'AI, as a reflection of human knowledge, inherits human flaws. This risk involves systems becoming discriminatory and perpetuating biases, which clubs must monitor.',
+      severity: 'High Risk',
+      color: 'red',
+      source: sourceMapping.FCB,
     },
     {
       title: 'Privacy Concerns',
-      description: 'Extensive biometric and behavioral data collection raises questions about player consent, data ownership, and potential misuse.',
-      severity: 'High',
+      description: 'The extensive collection of data is contentious. Hacker attacks on player data can be highly detrimental to their privacy and professional careers.',
+      severity: 'High Risk',
       color: 'yellow',
+      source: sourceMapping.FCB,
     },
     {
       title: 'Career Impact',
-      description: 'AI-driven decisions about player potential can have permanent effects on career opportunities without opportunity for appeal or human reconsideration.',
+      description: 'AI decisions regarding a player’s continuity or transfer based on statistics and performance projections are a sensitive area classified as High Risk.',
       severity: 'Critical',
       color: 'red',
+      source: sourceMapping.FCB,
     },
   ];
 
+  // REQUIREMENTS (Derived from EU AI Act mandates, per FCBarcelona.com)
   const requirements = [
     {
       icon: FileCheck,
       title: 'Explicit Consent',
-      description: 'Clubs must obtain clear, informed consent from players before collecting and processing biometric data.',
+      description: 'The player must agree to the club using their biometric data for performance analysis under the legal basis of consent.',
       color: 'from-blue-500 to-cyan-500',
+      source: sourceMapping.FCB,
     },
     {
       icon: Eye,
       title: 'Human Oversight',
-      description: 'Qualified personnel must review all AI recommendations before implementation to prevent rights violations.',
+      description: 'Clubs must assign human oversight to qualified personnel who have the necessary competence and authority to prevent risks.',
       color: 'from-green-500 to-emerald-500',
+      source: sourceMapping.FCB,
     },
     {
       icon: Shield,
       title: 'Transparency',
-      description: 'Decision-making processes must be explainable and players have the right to understand how AI impacts their careers.',
+      description: 'Clubs must be able to justify their trust in AI and ensure decisions based on AI are objective and accessible to the player.',
       color: 'from-purple-500 to-pink-500',
+      source: sourceMapping.FCB,
     },
     {
       icon: Users,
-      title: 'Regular Audits',
-      description: 'Independent audits of AI systems to identify and correct bias, ensure fairness, and verify compliance.',
+      title: 'Regulatory Compliance',
+      description: 'Clubs must establish a risk management system to periodically review, monitor systems, and ensure products comply with regulations.',
       color: 'from-orange-500 to-red-500',
+      source: sourceMapping.FCB,
     },
   ];
 
@@ -72,7 +87,7 @@ const Ethics = () => {
             </h1>
 
             <p className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
-              The critical counter-argument: addressing future challenges of legal compliance and responsible AI use
+              The critical counter-argument: addressing future challenges of legal compliance and responsible AI use in professional football.
             </p>
           </div>
 
@@ -82,7 +97,7 @@ const Ethics = () => {
                 €35M
               </div>
               <div className="text-sm font-semibold text-gray-300 mb-2">Maximum Penalty</div>
-              <div className="text-xs text-gray-500">EU AI Act non-compliance fine</div>
+              <div className="text-xs text-gray-500">EU AI Act non-compliance fine (FCBarcelona.com)</div>
             </div>
 
             <div className="bg-linear-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700/50 hover:border-orange-500/50 transition-all duration-500 hover:scale-105">
@@ -90,15 +105,15 @@ const Ethics = () => {
                 High
               </div>
               <div className="text-sm font-semibold text-gray-300 mb-2">Risk Classification</div>
-              <div className="text-xs text-gray-500">Biometric data decisions</div>
+              <div className="text-xs text-gray-500">Biometric data decisions (FCBarcelona.com)</div>
             </div>
 
             <div className="bg-linear-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700/50 hover:border-yellow-500/50 transition-all duration-500 hover:scale-105">
               <div className="text-5xl font-bold bg-linear-to-r from-yellow-400 to-green-500 bg-clip-text text-transparent mb-3">
-                100%
+                7%
               </div>
-              <div className="text-sm font-semibold text-gray-300 mb-2">Oversight Required</div>
-              <div className="text-xs text-gray-500">Human review mandatory</div>
+              <div className="text-sm font-semibold text-gray-300 mb-2">Turnover Fine</div>
+              <div className="text-xs text-gray-500">Alternative penalty for non-compliance (FCBarcelona.com)</div>
             </div>
           </div>
         </div>
@@ -113,7 +128,7 @@ const Ethics = () => {
               </span>
             </h2>
             <p className="text-gray-400 text-center max-w-3xl mx-auto leading-relaxed">
-              The &quot;They Say&quot; — Understanding the risks and challenges that demand careful consideration
+              Understanding the major risks that demand rigorous attention and mitigation (FCBarcelona.com).
             </p>
           </div>
 
@@ -133,39 +148,30 @@ const Ethics = () => {
                     {risk.severity}
                   </span>
                 </div>
-                <p className="text-gray-400 leading-relaxed">{risk.description}</p>
+                <p className="text-gray-400 leading-relaxed">{risk.description} (FCBarcelona.com)</p>
               </div>
             ))}
           </div>
 
           <div className="bg-linear-to-r from-red-900/30 to-orange-900/30 border border-red-500/30 rounded-xl p-12">
-            <h3 className="text-3xl font-bold mb-6 text-center text-red-400">Understanding the Black Box</h3>
+            <h3 className="text-3xl font-bold mb-6 text-center text-red-400">The Core Risks</h3>
 
             <div className="grid md:grid-cols-2 gap-8">
               <div className="space-y-4">
-                <h4 className="text-xl font-bold text-gray-200">The Problem</h4>
+                <h4 className="text-xl font-bold text-gray-200">The Problem of Transparency</h4>
                 <p className="text-gray-300 leading-relaxed">
-                  Modern AI systems, particularly deep neural networks, operate through millions of interconnected
-                  parameters that process data in ways even their creators cannot fully explain.
+                  The &quot;black box&quot; effect refers to the difficulty in interpreting the conclusions of complex algorithms, making AI recommendations unpredictable because it&apos;s unclear how the system arrived at a particular result (FCBarcelona.com).
                 </p>
                 <div className="bg-gray-900/50 rounded-lg p-6">
-                  <h5 className="font-semibold text-gray-200 mb-3">Consequences:</h5>
+                  <h5 className="font-semibold text-gray-200 mb-3">Impacts on Fairness:</h5>
                   <ul className="space-y-2 text-sm text-gray-400">
                     <li className="flex items-start space-x-2">
                       <span className="text-red-400 mt-1">•</span>
-                      <span>Unpredictable conclusions about player potential</span>
+                      <span>When AI conclusions affect individuals, decisions must be objective, fair, and equitable (FCBarcelona.com).</span>
                     </li>
                     <li className="flex items-start space-x-2">
                       <span className="text-red-400 mt-1">•</span>
-                      <span>Inability to challenge or appeal decisions</span>
-                    </li>
-                    <li className="flex items-start space-x-2">
-                      <span className="text-red-400 mt-1">•</span>
-                      <span>Hidden biases affecting career opportunities</span>
-                    </li>
-                    <li className="flex items-start space-x-2">
-                      <span className="text-red-400 mt-1">•</span>
-                      <span>Lack of accountability for incorrect predictions</span>
+                      <span>Clubs must be able to justify their trust in the AI and the decisions made based on it (FCBarcelona.com).</span>
                     </li>
                   </ul>
                 </div>
@@ -174,27 +180,18 @@ const Ethics = () => {
               <div className="space-y-4">
                 <h4 className="text-xl font-bold text-gray-200">Algorithmic Bias Risk</h4>
                 <p className="text-gray-300 leading-relaxed">
-                  AI systems trained on historical data inherit the biases present in that data, potentially
-                  perpetuating discrimination in player evaluation and career decisions.
+                  The risk of &quot;inherent bias&quot; means that AI systems can become discriminatory if they inherit flaws present in human knowledge or the data they are trained on (FCBarcelona.com).
                 </p>
                 <div className="bg-gray-900/50 rounded-lg p-6">
-                  <h5 className="font-semibold text-gray-200 mb-3">Bias Sources:</h5>
+                  <h5 className="font-semibold text-gray-200 mb-3">Bias Mitigation:</h5>
                   <ul className="space-y-2 text-sm text-gray-400">
                     <li className="flex items-start space-x-2">
                       <span className="text-orange-400 mt-1">•</span>
-                      <span>Historical underrepresentation in training data</span>
+                      <span>It is the responsibility of clubs to monitor their AI systems to ensure biases are not perpetuated (FCBarcelona.com).</span>
                     </li>
                     <li className="flex items-start space-x-2">
                       <span className="text-orange-400 mt-1">•</span>
-                      <span>Socioeconomic factors affecting opportunity access</span>
-                    </li>
-                    <li className="flex items-start space-x-2">
-                      <span className="text-orange-400 mt-1">•</span>
-                      <span>Cultural biases in subjective assessments</span>
-                    </li>
-                    <li className="flex items-start space-x-2">
-                      <span className="text-orange-400 mt-1">•</span>
-                      <span>Geographic disparities in scouting coverage</span>
+                      <span>Clubs need to establish a risk management system to periodically review and monitor systems for bias (FCBarcelona.com).</span>
                     </li>
                   </ul>
                 </div>
@@ -202,7 +199,7 @@ const Ethics = () => {
             </div>
 
             <div className="mt-8 text-center text-sm text-gray-500">
-              Source: Risks and Benefits of AI Use in Football
+              Source: Risks and Benefits of AI Use in Football (FCBarcelona.com)
             </div>
           </div>
         </div>
@@ -220,10 +217,9 @@ const Ethics = () => {
 
           <div className="bg-linear-to-r from-blue-900/30 to-purple-900/30 border border-blue-500/30 rounded-xl p-12 mb-20">
             <div className="text-center mb-8">
-              <h3 className="text-3xl font-bold mb-4">The EU Artificial Intelligence Act</h3>
+              <h3 className="text-3xl font-bold mb-4">The EU Artificial Intelligence Act (AI Act)</h3>
               <p className="text-gray-300 max-w-3xl mx-auto leading-relaxed">
-                The European Union has established comprehensive regulations governing AI systems, with severe financial
-                penalties for non-compliance in high-risk applications.
+                The EU AI Act will come into effect on August 2, 2026, setting mandatory measures and severe penalties for non-compliance (FCBarcelona.com).
               </p>
             </div>
 
@@ -231,25 +227,16 @@ const Ethics = () => {
               <div className="bg-gray-900/50 rounded-xl p-8">
                 <h4 className="text-xl font-bold text-blue-400 mb-4">High-Risk Classification</h4>
                 <p className="text-gray-300 mb-4 leading-relaxed">
-                  AI systems that make decisions affecting a player&apos;s future based on biometric data are classified as
-                  High Risk under the EU AI Act.
+                  AI systems are classified as High Risk if they involve biometric systems or profile natural persons (FCBarcelona.com).
                 </p>
                 <div className="space-y-3">
                   <div className="flex items-start space-x-2">
                     <div className="w-2 h-2 rounded-full bg-blue-400 mt-2" />
-                    <span className="text-sm text-gray-400">Career opportunity decisions</span>
+                    <span className="text-sm text-gray-400">This includes AI decisions regarding a player’s continuity or transfer (FCBarcelona.com).</span>
                   </div>
                   <div className="flex items-start space-x-2">
                     <div className="w-2 h-2 rounded-full bg-blue-400 mt-2" />
-                    <span className="text-sm text-gray-400">Contract renewal recommendations</span>
-                  </div>
-                  <div className="flex items-start space-x-2">
-                    <div className="w-2 h-2 rounded-full bg-blue-400 mt-2" />
-                    <span className="text-sm text-gray-400">Transfer market valuations</span>
-                  </div>
-                  <div className="flex items-start space-x-2">
-                    <div className="w-2 h-2 rounded-full bg-blue-400 mt-2" />
-                    <span className="text-sm text-gray-400">Recruitment selections</span>
+                    <span className="text-sm text-gray-400">The Act also covers systems that exploit vulnerabilities based on age or economic situation (FCBarcelona.com).</span>
                   </div>
                 </div>
               </div>
@@ -257,15 +244,11 @@ const Ethics = () => {
               <div className="bg-gray-900/50 rounded-xl p-8">
                 <h4 className="text-xl font-bold text-purple-400 mb-4">Financial Penalties</h4>
                 <p className="text-gray-300 mb-4 leading-relaxed">
-                  Non-compliance with the AI Act can result in fines of up to €35 million or 7% of global annual
-                  turnover, whichever is higher.
+                  Fines for non-compliance can amount to €35 million or 7% of the company’s turnover in the previous financial year, whichever is higher (FCBarcelona.com).
                 </p>
                 <div className="bg-red-900/30 border border-red-500/30 rounded-lg p-6">
-                  <div className="text-4xl font-bold text-red-400 mb-2">€35M</div>
-                  <div className="text-sm text-gray-400 mb-4">Maximum Penalty Amount</div>
-                  <p className="text-xs text-gray-500">
-                    For prohibited AI practices or non-compliance with high-risk system requirements
-                  </p>
+                  <div className="text-4xl font-bold text-red-400 mb-2">€35M / 7%</div>
+                  <div className="text-sm text-gray-400 mb-4">Max Fine / Global Turnover (FCBarcelona.com)</div>
                 </div>
               </div>
             </div>
@@ -274,11 +257,11 @@ const Ethics = () => {
           <div className="mb-16">
             <h2 className="text-3xl font-bold mb-8 text-center">
               <span className="bg-linear-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent">
-                Mandatory Human Oversight
+                Mandatory Human Oversight & Data Rights
               </span>
             </h2>
             <p className="text-gray-400 text-center max-w-3xl mx-auto mb-12 leading-relaxed">
-              The non-negotiable ethical requirements for clubs implementing AI systems
+              Clubs bear significant responsibilities as end users of AI systems, requiring rigorous attention to player rights and data governance (FCBarcelona.com).
             </p>
           </div>
 
@@ -295,34 +278,30 @@ const Ethics = () => {
                     <Icon size={28} className="text-white" />
                   </div>
                   <h3 className="text-lg font-bold mb-3">{requirement.title}</h3>
-                  <p className="text-sm text-gray-400 leading-relaxed">{requirement.description}</p>
+                  <p className="text-sm text-gray-400 leading-relaxed">{requirement.description} (FCBarcelona.com)</p>
                 </div>
               );
             })}
           </div>
 
           <div className="bg-linear-to-r from-green-900/30 to-emerald-900/30 border border-green-500/30 rounded-xl p-12">
-            <h3 className="text-3xl font-bold mb-6 text-center">Key Compliance Requirements</h3>
+            <h3 className="text-3xl font-bold mb-6 text-center">Key Compliance Requirements (FCBarcelona.com)</h3>
 
             <div className="grid md:grid-cols-3 gap-8">
               <div className="bg-gray-900/50 rounded-xl p-6">
-                <h4 className="font-bold text-green-400 mb-3">Data Protection</h4>
+                <h4 className="font-bold text-green-400 mb-3">Data Protection (Legal Basis)</h4>
                 <ul className="space-y-2 text-sm text-gray-400">
                   <li className="flex items-start space-x-2">
                     <span className="text-green-400">✓</span>
-                    <span>Explicit consent for biometric data collection</span>
+                    <span>Consent of the individual (player must agree to using biometric data).</span>
                   </li>
                   <li className="flex items-start space-x-2">
                     <span className="text-green-400">✓</span>
-                    <span>Right to data access and deletion</span>
+                    <span>Performance of a contract (e.g., if data affects player bonuses).</span>
                   </li>
                   <li className="flex items-start space-x-2">
                     <span className="text-green-400">✓</span>
-                    <span>Secure data storage and transmission</span>
-                  </li>
-                  <li className="flex items-start space-x-2">
-                    <span className="text-green-400">✓</span>
-                    <span>Regular privacy impact assessments</span>
+                    <span>Protection of vital interests (e.g., if a player needs urgent medical assistance).</span>
                   </li>
                 </ul>
               </div>
@@ -332,19 +311,15 @@ const Ethics = () => {
                 <ul className="space-y-2 text-sm text-gray-400">
                   <li className="flex items-start space-x-2">
                     <span className="text-blue-400">✓</span>
-                    <span>Explainable AI decision-making processes</span>
+                    <span>Clubs must maintain a record that accurately documents data usage.</span>
                   </li>
                   <li className="flex items-start space-x-2">
                     <span className="text-blue-400">✓</span>
-                    <span>Documentation of AI system logic</span>
+                    <span>Training is required for personnel responsible for operating AI systems.</span>
                   </li>
                   <li className="flex items-start space-x-2">
                     <span className="text-blue-400">✓</span>
-                    <span>Player notification of AI use</span>
-                  </li>
-                  <li className="flex items-start space-x-2">
-                    <span className="text-blue-400">✓</span>
-                    <span>Clear communication of limitations</span>
+                    <span>Clubs must ensure open communication channels with providers to verify compliance.</span>
                   </li>
                 </ul>
               </div>
@@ -354,50 +329,17 @@ const Ethics = () => {
                 <ul className="space-y-2 text-sm text-gray-400">
                   <li className="flex items-start space-x-2">
                     <span className="text-purple-400">✓</span>
-                    <span>Qualified personnel oversight</span>
+                    <span>Human oversight must aim to prevent or minimize risks to health, safety, or fundamental rights.</span>
                   </li>
                   <li className="flex items-start space-x-2">
                     <span className="text-purple-400">✓</span>
-                    <span>Ability to override AI recommendations</span>
+                    <span>Clubs must be proactive in both incorporating AI and ensuring compliance with regulations.</span>
                   </li>
                   <li className="flex items-start space-x-2">
                     <span className="text-purple-400">✓</span>
-                    <span>Regular audit and review processes</span>
-                  </li>
-                  <li className="flex items-start space-x-2">
-                    <span className="text-purple-400">✓</span>
-                    <span>Appeal mechanisms for players</span>
+                    <span>Compliance is relatively straightforward if clear and effective policies are developed.</span>
                   </li>
                 </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-linear-to-b from-transparent via-gray-900/50 to-transparent">
-        <div className="max-w-5xl mx-auto">
-          <div className="bg-linear-to-r from-blue-900/30 to-purple-900/30 border border-blue-500/30 rounded-xl p-12 text-center">
-            <h2 className="text-4xl font-bold mb-6">Conclusion: The Path Forward</h2>
-            <p className="text-xl text-gray-300 leading-relaxed mb-8">
-              AI is a powerful force for competitive gain in modern football, but its longevity and ethical legitimacy
-              hinge entirely on transparency, accountability, and responsible governance.
-            </p>
-            <div className="grid md:grid-cols-2 gap-6 text-left">
-              <div className="bg-gray-900/50 rounded-xl p-6">
-                <h3 className="text-lg font-bold text-cyan-400 mb-3">The Opportunity</h3>
-                <p className="text-gray-400 text-sm leading-relaxed">
-                  Clubs that implement AI responsibly gain unprecedented competitive advantages through injury
-                  prevention, strategic recruitment, and performance optimization while maintaining ethical standards
-                  and regulatory compliance.
-                </p>
-              </div>
-              <div className="bg-gray-900/50 rounded-xl p-6">
-                <h3 className="text-lg font-bold text-orange-400 mb-3">The Responsibility</h3>
-                <p className="text-gray-400 text-sm leading-relaxed">
-                  Success requires mandatory human oversight, transparent decision-making, regular bias audits, and
-                  unwavering commitment to player rights and data protection under evolving regulatory frameworks.
-                </p>
               </div>
             </div>
           </div>
