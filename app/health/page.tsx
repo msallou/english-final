@@ -1,18 +1,34 @@
 import { Heart, TrendingDown, Shield, Activity, AlertTriangle, Check } from 'lucide-react';
 
 const Health = () => {
+  // Mapping Source names to be used in the JSX (matching your annotated bibliography)
+  const sourceMapping = {
+    ESPN: "Ogden (ESPN)", // Source 2
+    Qiao: "Qiao", // Source 10
+    Jacobs: "Jacobs", // Source 1
+    Munoz: "Munoz-Macho et al.", // Source 7
+  };
+
   const stats = [
-    { value: '66%', label: 'Injury Reduction', sublabel: 'Getafe Case Study', color: 'from-green-400 to-emerald-500' },
-    { value: '99.6%', label: 'Prediction Precision', sublabel: 'ANN Model Accuracy', color: 'from-blue-400 to-cyan-500' },
-    { value: '24/7', label: 'Monitoring', sublabel: 'Continuous Data Collection', color: 'from-purple-400 to-pink-500' },
-    { value: '<1s', label: 'Alert Response', sublabel: 'Real-Time Risk Detection', color: 'from-orange-400 to-red-500' },
+    // Source 2: Getafe Case Study
+    { value: '66%', label: 'Injury Reduction', sublabel: 'Getafe Case Study', color: 'from-green-400 to-emerald-500', source: sourceMapping.ESPN },
+    // Source 10: ANN Model Accuracy (99.6% precision)
+    { value: '99.6%', label: 'Prediction Precision', sublabel: 'ANN Model Accuracy', color: 'from-blue-400 to-cyan-500', source: sourceMapping.Qiao },
+    // Source 7 & 10: Continuous Monitoring of Load/Wellness
+    { value: '200M', label: 'Data Hours Analyzed', sublabel: 'Global Database Volume', color: 'from-purple-400 to-pink-500', source: sourceMapping.ESPN },
+    // Source 10: 7.2% Higher risk prediction rate
+    { value: '+7.2%', label: 'Risk Prediction Gain', sublabel: 'Over Traditional Models', color: 'from-orange-400 to-red-500', source: sourceMapping.Qiao },
   ];
 
   const riskFactors = [
-    { category: 'Physical Load', items: ['Training intensity', 'Match minutes', 'Sprint distance', 'Acceleration events'] },
-    { category: 'Biomechanics', items: ['Movement asymmetry', 'Joint angles', 'Ground contact time', 'Force distribution'] },
-    { category: 'Physiological', items: ['Heart rate variability', 'Sleep quality', 'Blood markers', 'Hydration levels'] },
-    { category: 'Environmental', items: ['Playing surface', 'Weather conditions', 'Altitude', 'Recovery time'] },
+    // Source 7: External Load/Wellness
+    { category: 'Physical Load', items: ['Training intensity (Munoz-Macho et al.)', 'Match minutes (Munoz-Macho et al.)', 'Sprint distance (Munoz-Macho et al.)', 'Recovery time (Munoz-Macho et al.)'] },
+    // Source 7: Biomechanics/Physiological
+    { category: 'Biomechanics', items: ['Movement asymmetry (Munoz-Macho et al.)', 'Joint angles (Qiao)', 'Force distribution (Qiao)', 'Biomechanical Modeling (Munoz-Macho et al.)'] },
+    // Source 7: Physiological/Jacobs
+    { category: 'Physiological', items: ['Blood markers (Munoz-Macho et al.)', 'Sleep quality (Munoz-Macho et al.)', 'Wellness indicators (Munoz-Macho et al.)', 'Heart rate (Jacobs; Qiao)'] },
+    // Source 2: Zone7 Alerts / Source 1: Reduced Practice
+    { category: 'Intervention Alerts', items: ['Daily risk alerts (Ogden (ESPN))', 'In-game substitution support (Ogden (ESPN))', 'Reduced/No-contact practices (Jacobs)', 'Medical ultrasound confirmation (Ogden (ESPN))'] },
   ];
 
   return (
@@ -32,7 +48,7 @@ const Health = () => {
             </h1>
 
             <p className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
-              Compelling evidence of AI&apos;s success in predictive injury prevention and player wellness management
+              AI has moved sports medicine to a proactive, predictive system, representing the &quot;holy grail of sports scientists&quot; (Ogden (ESPN)).
             </p>
           </div>
 
@@ -47,7 +63,7 @@ const Health = () => {
                   {stat.value}
                 </div>
                 <div className="text-sm font-semibold text-gray-300 mb-1">{stat.label}</div>
-                <div className="text-xs text-gray-500">{stat.sublabel}</div>
+                <div className="text-xs text-gray-500">{stat.sublabel} (Source: {stat.source})</div>
               </div>
             ))}
           </div>
@@ -73,24 +89,15 @@ const Health = () => {
                 </div>
                 <div className="space-y-4">
                   <div className="bg-gray-900/50 rounded-lg p-4">
-                    <div className="text-lg font-semibold text-gray-200 mb-2">Financial Cost of Injuries</div>
+                    <div className="text-lg font-semibold text-gray-200 mb-2">Financial and Career Cost</div>
                     <p className="text-gray-400 text-sm">
-                      A single injury to a key player can cost clubs millions in lost performance, medical expenses,
-                      and emergency transfer market activity.
+                      A depleted squad can lead to negative results, costing the coach their job (Ogden (ESPN)). Long-term injuries can end a player&apos;s career (Qiao). Preventing injuries is arguably the most important challenge facing any coach in the pursuit of marginal gains (Ogden (ESPN)).
                     </p>
                   </div>
                   <div className="bg-gray-900/50 rounded-lg p-4">
-                    <div className="text-lg font-semibold text-gray-200 mb-2">Squad Depletion</div>
+                    <div className="text-lg font-semibold text-gray-200 mb-2">Data Overload</div>
                     <p className="text-gray-400 text-sm">
-                      Multiple injuries severely limit tactical options and can derail entire seasons, affecting
-                      competitive standings and revenue.
-                    </p>
-                  </div>
-                  <div className="bg-gray-900/50 rounded-lg p-4">
-                    <div className="text-lg font-semibold text-gray-200 mb-2">Career Impact</div>
-                    <p className="text-gray-400 text-sm">
-                      Long-term injuries can permanently affect player development and career trajectories, especially
-                      for younger athletes.
+                      Clubs collect data on strength, flexibility, GPS, and sleep, creating a puzzle that &quot;a human brain wasn&apos;t really meant to solve&quot; (Ogden (ESPN)).
                     </p>
                   </div>
                 </div>
@@ -105,36 +112,23 @@ const Health = () => {
                 </div>
                 <div className="space-y-4">
                   <div className="bg-gray-900/50 rounded-lg p-4">
-                    <div className="text-lg font-semibold text-gray-200 mb-2">Zone7 Deep Learning</div>
+                    <div className="text-lg font-semibold text-gray-200 mb-2">Pattern Recognition and Volume</div>
                     <p className="text-gray-400 text-sm mb-3">
-                      Advanced neural networks analyze millions of data points to identify subtle patterns that precede
-                      injuries, often weeks before symptoms appear.
+                      AI uses deep learning to find patterns that repeat themselves before specific injuries occur (Ogden (ESPN)). The immense volume of football data analyzed (200 million hours) enables the program to predict injury risk effectively (Ogden (ESPN)).
                     </p>
                     <div className="flex items-center space-x-2 text-green-400 text-sm">
                       <Check size={16} />
-                      <span>Pattern recognition across multiple variables</span>
+                      <span>AI successfully predicted five of seven muscular injuries during a trial period (Ogden (ESPN)).</span>
                     </div>
                   </div>
                   <div className="bg-gray-900/50 rounded-lg p-4">
-                    <div className="text-lg font-semibold text-gray-200 mb-2">Proven Results</div>
+                    <div className="text-lg font-semibold text-gray-200 mb-2">Proactive Intervention</div>
                     <p className="text-gray-400 text-sm mb-3">
-                      Getafe CF implemented AI-driven injury prevention protocols and achieved a remarkable 66%
-                      reduction in non-contact injuries.
+                      The system provides alerts for players who may be straying close to the &quot;danger zone,&quot; allowing staff to address potential muscular damage before the injury occurs (Ogden (ESPN)).
                     </p>
                     <div className="flex items-center space-x-2 text-green-400 text-sm">
                       <Check size={16} />
-                      <span>Quantified, measurable impact on player availability</span>
-                    </div>
-                  </div>
-                  <div className="bg-gray-900/50 rounded-lg p-4">
-                    <div className="text-lg font-semibold text-gray-200 mb-2">Preventive Action</div>
-                    <p className="text-gray-400 text-sm mb-3">
-                      System provides actionable alerts allowing medical staff to adjust training loads, implement
-                      recovery protocols, or rest players proactively.
-                    </p>
-                    <div className="flex items-center space-x-2 text-green-400 text-sm">
-                      <Check size={16} />
-                      <span>Real-time intervention before injury occurs</span>
+                      <span>This information informs player rotation and substitution decisions during games (Ogden (ESPN)).</span>
                     </div>
                   </div>
                 </div>
@@ -144,58 +138,49 @@ const Health = () => {
 
           <div className="bg-linear-to-r from-cyan-900/30 to-blue-900/30 border border-cyan-500/30 rounded-xl p-12 mb-20">
             <h2 className="text-3xl font-bold mb-6 text-center">
-              The Science of Risk Prediction
+              The Science of Risk Prediction (Qiao)
             </h2>
 
             <div className="grid md:grid-cols-2 gap-8 mb-8">
               <div>
                 <h3 className="text-xl font-bold text-cyan-400 mb-4">Artificial Neural Network (ANN) Model</h3>
                 <p className="text-gray-300 leading-relaxed mb-4">
-                  Advanced ANN architectures process data from Wireless Sensor Networks (WSN) including GPS trackers,
-                  heart rate monitors, and accelerometers to predict knee injury risk with exceptional precision.
+                  An advanced ANN algorithm, implemented with Wireless Sensor Network (WSN) technology, is used to predict knee injury risk with exceptional precision (Qiao). The model achieved a $99.6\%$ precision rate (Qiao).
                 </p>
                 <div className="bg-gray-900/50 rounded-lg p-6">
-                  <div className="text-4xl font-bold text-cyan-400 mb-2">99.6%</div>
-                  <div className="text-sm text-gray-400 mb-4">Prediction Precision Rate</div>
+                  <div className="text-4xl font-bold text-cyan-400 mb-2">+7.2%</div>
+                  <div className="text-sm text-gray-400 mb-4">Prediction Gain Over Fuzzy Logic</div>
                   <p className="text-xs text-gray-500">
-                    Source: The Application of Artificial Intelligence in Football Risk Prediction
+                    The ANN model&apos;s risk prediction is 7.2% higher in comparison to the existing fuzzy logic model (Qiao).
                   </p>
                 </div>
               </div>
 
               <div>
-                <h3 className="text-xl font-bold text-blue-400 mb-4">Data Integration</h3>
+                <h3 className="text-xl font-bold text-blue-400 mb-4">Proactive Safety Protocols</h3>
                 <p className="text-gray-300 leading-relaxed mb-4">
-                  The model continuously integrates multiple data streams to create a comprehensive risk profile for
-                  each player:
+                  AI predicts that a player may get injured in a few days due to pressure, frequency of training, and exercise intensity (Qiao).
                 </p>
                 <div className="space-y-3">
                   <div className="flex items-start space-x-3">
                     <Activity className="text-blue-400 mt-1 shrink-0" size={20} />
                     <div>
-                      <div className="text-sm font-semibold text-gray-300">Movement Data</div>
-                      <div className="text-xs text-gray-500">GPS position, velocity, acceleration, deceleration</div>
+                      <div className="text-sm font-semibold text-gray-300">Data Source</div>
+                      <div className="text-xs text-gray-500">Tight tops worn under the jersey contain GPS, accelerometers, gyroscopes, and related sensors (Qiao).</div>
                     </div>
                   </div>
                   <div className="flex items-start space-x-3">
                     <Heart className="text-red-400 mt-1 shrink-0" size={20} />
                     <div>
-                      <div className="text-sm font-semibold text-gray-300">Physiological Markers</div>
-                      <div className="text-xs text-gray-500">Heart rate, HRV, blood chemistry, fatigue indicators</div>
+                      <div className="text-sm font-semibold text-gray-300">Life-Saving IoT</div>
+                      <div className="text-xs text-gray-500">Life-saving IoT is implemented to avoid major risk, making football a safer sport (Qiao).</div>
                     </div>
                   </div>
                   <div className="flex items-start space-x-3">
                     <TrendingDown className="text-yellow-400 mt-1 shrink-0" size={20} />
                     <div>
-                      <div className="text-sm font-semibold text-gray-300">Load Metrics</div>
-                      <div className="text-xs text-gray-500">Training intensity, match exposure, recovery time</div>
-                    </div>
-                  </div>
-                  <div className="flex items-start space-x-3">
-                    <Shield className="text-green-400 mt-1 shrink-0" size={20} />
-                    <div>
-                      <div className="text-sm font-semibold text-gray-300">Biomechanics</div>
-                      <div className="text-xs text-gray-500">Joint angles, force distribution, movement asymmetry</div>
+                      <div className="text-sm font-semibold text-gray-300">Intervention</div>
+                      <div className="text-xs text-gray-500">Proper rest is given to the player after AI identification, preventing career-ending injuries (Qiao).</div>
                     </div>
                   </div>
                 </div>
@@ -206,13 +191,12 @@ const Health = () => {
           <div>
             <h2 className="text-3xl font-bold mb-8 text-center">
               <span className="bg-linear-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
-                Multifactorial Player Health Monitoring
+                Multifactorial Health Monitoring (Munoz-Macho et al.; Jacobs)
               </span>
             </h2>
 
             <p className="text-gray-400 text-center mb-12 max-w-3xl mx-auto">
-              Health prediction involves comprehensive monitoring beyond just physical load, integrating biomechanical
-              analysis, wellness indicators, and internal physiological markers.
+              Health prediction involves comprehensive monitoring beyond just physical load, integrating biomechanical analysis, wellness indicators, and internal physiological markers (Munoz-Macho et al.).
             </p>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -234,10 +218,6 @@ const Health = () => {
                 </div>
               ))}
             </div>
-
-            <div className="mt-8 text-center text-sm text-gray-500">
-              Source: Performance and healthcare analysis in elite soccer via machine learning
-            </div>
           </div>
         </div>
       </section>
@@ -250,21 +230,20 @@ const Health = () => {
             </div>
             <h2 className="text-3xl font-bold mb-6">The Competitive Advantage</h2>
             <p className="text-xl text-gray-300 leading-relaxed mb-8">
-              Clubs implementing AI-driven injury prevention maintain higher player availability, reduce medical costs,
-              and gain a decisive competitive edge through optimal squad management and strategic roster planning.
+              Clubs implementing AI-driven injury prevention maintain higher player availability, reduce medical costs, and gain a decisive competitive edge through optimal squad management and strategic roster planning (Jacobs).
             </p>
             <div className="grid grid-cols-3 gap-8">
               <div>
-                <div className="text-4xl font-bold text-green-400 mb-2">+20%</div>
-                <div className="text-sm text-gray-400">Player Availability</div>
+                <div className="text-4xl font-bold text-green-400 mb-2">Optimal</div>
+                <div className="text-sm text-gray-400">Squad Availability</div>
               </div>
               <div>
                 <div className="text-4xl font-bold text-green-400 mb-2">-66%</div>
-                <div className="text-sm text-gray-400">Non-Contact Injuries</div>
+                <div className="text-sm text-gray-400">Non-Contact Injuries (Ogden (ESPN))</div>
               </div>
               <div>
-                <div className="text-4xl font-bold text-green-400 mb-2">€Ms</div>
-                <div className="text-sm text-gray-400">Cost Savings</div>
+                <div className="text-4xl font-bold text-green-400 mb-2">Proactive</div>
+                <div className="text-sm text-gray-400">Risk Management (Qiao)</div>
               </div>
             </div>
           </div>
