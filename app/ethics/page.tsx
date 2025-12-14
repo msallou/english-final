@@ -3,7 +3,7 @@ import { Scale, AlertTriangle, Shield, Eye, FileCheck, Users } from 'lucide-reac
 const Ethics = () => {
   // Mapping Source names (matching annotated bibliography)
   const sourceMapping = {
-    FCB: "FCBarcelona.com", // Source 6
+    FCB: "FCBarcelona.com, 2025", // Source 6
   };
 
   // RISKS (Derived from FCBarcelona.com)
@@ -97,7 +97,7 @@ const Ethics = () => {
                 €35M
               </div>
               <div className="text-sm font-semibold text-gray-300 mb-2">Maximum Penalty</div>
-              <div className="text-xs text-gray-500">EU AI Act non-compliance fine (FCBarcelona.com)</div>
+              <div className="text-xs text-gray-500">EU AI Act non-compliance fine (FCBarcelona.com, 2025)</div>
             </div>
 
             <div className="bg-linear-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700/50 hover:border-orange-500/50 transition-all duration-500 hover:scale-105">
@@ -105,7 +105,7 @@ const Ethics = () => {
                 High
               </div>
               <div className="text-sm font-semibold text-gray-300 mb-2">Risk Classification</div>
-              <div className="text-xs text-gray-500">Biometric data decisions (FCBarcelona.com)</div>
+              <div className="text-xs text-gray-500">Biometric data decisions (FCBarcelona.com, 2025)</div>
             </div>
 
             <div className="bg-linear-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700/50 hover:border-yellow-500/50 transition-all duration-500 hover:scale-105">
@@ -113,7 +113,7 @@ const Ethics = () => {
                 7%
               </div>
               <div className="text-sm font-semibold text-gray-300 mb-2">Turnover Fine</div>
-              <div className="text-xs text-gray-500">Alternative penalty for non-compliance (FCBarcelona.com)</div>
+              <div className="text-xs text-gray-500">Alternative penalty for non-compliance (FCBarcelona.com, 2025)</div>
             </div>
           </div>
         </div>
@@ -128,7 +128,7 @@ const Ethics = () => {
               </span>
             </h2>
             <p className="text-gray-400 text-center max-w-3xl mx-auto leading-relaxed">
-              Understanding the major risks that demand rigorous attention and mitigation (FCBarcelona.com).
+              Understanding the major risks that demand rigorous attention and mitigation (FCBarcelona.com, 2025).
             </p>
           </div>
 
@@ -148,7 +148,7 @@ const Ethics = () => {
                     {risk.severity}
                   </span>
                 </div>
-                <p className="text-gray-400 leading-relaxed">{risk.description} (FCBarcelona.com)</p>
+                <p className="text-gray-400 leading-relaxed">{risk.description} (FCBarcelona.com, 2025)</p>
               </div>
             ))}
           </div>
@@ -160,18 +160,18 @@ const Ethics = () => {
               <div className="space-y-4">
                 <h4 className="text-xl font-bold text-gray-200">The Problem of Transparency</h4>
                 <p className="text-gray-300 leading-relaxed">
-                  The &quot;black box&quot; effect refers to the difficulty in interpreting the conclusions of complex algorithms, making AI recommendations unpredictable because it&apos;s unclear how the system arrived at a particular result (FCBarcelona.com).
+                  The &quot;black box&quot; effect refers to the difficulty in interpreting the conclusions of complex algorithms, making AI recommendations unpredictable because it&apos;s unclear how the system arrived at a particular result (FCBarcelona.com, 2025).
                 </p>
                 <div className="bg-gray-900/50 rounded-lg p-6">
                   <h5 className="font-semibold text-gray-200 mb-3">Impacts on Fairness:</h5>
                   <ul className="space-y-2 text-sm text-gray-400">
                     <li className="flex items-start space-x-2">
                       <span className="text-red-400 mt-1">•</span>
-                      <span>When AI conclusions affect individuals, decisions must be objective, fair, and equitable (FCBarcelona.com).</span>
+                      <span>When AI conclusions affect individuals, decisions must be objective, fair, and equitable (FCBarcelona.com, 2025).</span>
                     </li>
                     <li className="flex items-start space-x-2">
                       <span className="text-red-400 mt-1">•</span>
-                      <span>Clubs must be able to justify their trust in the AI and the decisions made based on it (FCBarcelona.com).</span>
+                      <span>Clubs must be able to justify their trust in the AI and the decisions made based on it (FCBarcelona.com, 2025).</span>
                     </li>
                   </ul>
                 </div>
@@ -180,18 +180,18 @@ const Ethics = () => {
               <div className="space-y-4">
                 <h4 className="text-xl font-bold text-gray-200">Algorithmic Bias Risk</h4>
                 <p className="text-gray-300 leading-relaxed">
-                  The risk of &quot;inherent bias&quot; means that AI systems can become discriminatory if they inherit flaws present in human knowledge or the data they are trained on (FCBarcelona.com).
+                  The risk of &quot;inherent bias&quot; means that AI systems can become discriminatory if they inherit flaws present in human knowledge or the data they are trained on (FCBarcelona.com, 2025).
                 </p>
                 <div className="bg-gray-900/50 rounded-lg p-6">
                   <h5 className="font-semibold text-gray-200 mb-3">Bias Mitigation:</h5>
                   <ul className="space-y-2 text-sm text-gray-400">
                     <li className="flex items-start space-x-2">
                       <span className="text-orange-400 mt-1">•</span>
-                      <span>It is the responsibility of clubs to monitor their AI systems to ensure biases are not perpetuated (FCBarcelona.com).</span>
+                      <span>It is the responsibility of clubs to monitor their AI systems to ensure biases are not perpetuated (FCBarcelona.com, 2025).</span>
                     </li>
                     <li className="flex items-start space-x-2">
                       <span className="text-orange-400 mt-1">•</span>
-                      <span>Clubs need to establish a risk management system to periodically review and monitor systems for bias (FCBarcelona.com).</span>
+                      <span>Clubs need to establish a risk management system to periodically review and monitor systems for bias (FCBarcelona.com, 2025).</span>
                     </li>
                   </ul>
                 </div>
@@ -199,7 +199,7 @@ const Ethics = () => {
             </div>
 
             <div className="mt-8 text-center text-sm text-gray-500">
-              Source: Risks and Benefits of AI Use in Football (FCBarcelona.com)
+              Source: Risks and Benefits of AI Use in Football (FCBarcelona.com, 2025)
             </div>
           </div>
         </div>
@@ -219,7 +219,7 @@ const Ethics = () => {
             <div className="text-center mb-8">
               <h3 className="text-3xl font-bold mb-4">The EU Artificial Intelligence Act (AI Act)</h3>
               <p className="text-gray-300 max-w-3xl mx-auto leading-relaxed">
-                The EU AI Act will come into effect on August 2, 2026, setting mandatory measures and severe penalties for non-compliance (FCBarcelona.com).
+                The EU AI Act will come into effect on August 2, 2026, setting mandatory measures and severe penalties for non-compliance (FCBarcelona.com, 2025).
               </p>
             </div>
 
@@ -227,16 +227,16 @@ const Ethics = () => {
               <div className="bg-gray-900/50 rounded-xl p-8">
                 <h4 className="text-xl font-bold text-blue-400 mb-4">High-Risk Classification</h4>
                 <p className="text-gray-300 mb-4 leading-relaxed">
-                  AI systems are classified as High Risk if they involve biometric systems or profile natural persons (FCBarcelona.com).
+                  AI systems are classified as High Risk if they involve biometric systems or profile natural persons (FCBarcelona.com, 2025).
                 </p>
                 <div className="space-y-3">
                   <div className="flex items-start space-x-2">
                     <div className="w-2 h-2 rounded-full bg-blue-400 mt-2" />
-                    <span className="text-sm text-gray-400">This includes AI decisions regarding a player’s continuity or transfer (FCBarcelona.com).</span>
+                    <span className="text-sm text-gray-400">This includes AI decisions regarding a player’s continuity or transfer (FCBarcelona.com, 2025).</span>
                   </div>
                   <div className="flex items-start space-x-2">
                     <div className="w-2 h-2 rounded-full bg-blue-400 mt-2" />
-                    <span className="text-sm text-gray-400">The Act also covers systems that exploit vulnerabilities based on age or economic situation (FCBarcelona.com).</span>
+                    <span className="text-sm text-gray-400">The Act also covers systems that exploit vulnerabilities based on age or economic situation (FCBarcelona.com, 2025).</span>
                   </div>
                 </div>
               </div>
@@ -244,7 +244,7 @@ const Ethics = () => {
               <div className="bg-gray-900/50 rounded-xl p-8">
                 <h4 className="text-xl font-bold text-purple-400 mb-4">Financial Penalties</h4>
                 <p className="text-gray-300 mb-4 leading-relaxed">
-                  Fines for non-compliance can amount to €35 million or 7% of the company’s turnover in the previous financial year, whichever is higher (FCBarcelona.com).
+                  Fines for non-compliance can amount to €35 million or 7% of the company’s turnover in the previous financial year, whichever is higher (FCBarcelona.com, 2025).
                 </p>
                 <div className="bg-red-900/30 border border-red-500/30 rounded-lg p-6">
                   <div className="text-4xl font-bold text-red-400 mb-2">€35M / 7%</div>
@@ -261,7 +261,7 @@ const Ethics = () => {
               </span>
             </h2>
             <p className="text-gray-400 text-center max-w-3xl mx-auto mb-12 leading-relaxed">
-              Clubs bear significant responsibilities as end users of AI systems, requiring rigorous attention to player rights and data governance (FCBarcelona.com).
+              Clubs bear significant responsibilities as end users of AI systems, requiring rigorous attention to player rights and data governance (FCBarcelona.com, 2025).
             </p>
           </div>
 
@@ -278,14 +278,14 @@ const Ethics = () => {
                     <Icon size={28} className="text-white" />
                   </div>
                   <h3 className="text-lg font-bold mb-3">{requirement.title}</h3>
-                  <p className="text-sm text-gray-400 leading-relaxed">{requirement.description} (FCBarcelona.com)</p>
+                  <p className="text-sm text-gray-400 leading-relaxed">{requirement.description} (FCBarcelona.com, 2025)</p>
                 </div>
               );
             })}
           </div>
 
           <div className="bg-linear-to-r from-green-900/30 to-emerald-900/30 border border-green-500/30 rounded-xl p-12">
-            <h3 className="text-3xl font-bold mb-6 text-center">Key Compliance Requirements (FCBarcelona.com)</h3>
+            <h3 className="text-3xl font-bold mb-6 text-center">Key Compliance Requirements (FCBarcelona.com, 2025)</h3>
 
             <div className="grid md:grid-cols-3 gap-8">
               <div className="bg-gray-900/50 rounded-xl p-6">
