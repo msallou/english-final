@@ -31,7 +31,7 @@ const Ethics = () => {
     },
     {
       title: 'Career Impact',
-      description: 'AI decisions regarding a player’s continuity or transfer based on statistics and performance projections are a sensitive area classified as High Risk.',
+      description: `AI decisions regarding a player${`'`}s continuity or transfer based on statistics and performance projections are a sensitive area classified as High Risk.`,
       severity: 'Critical',
       color: 'red',
       source: sourceMapping.FCB,
@@ -232,7 +232,7 @@ const Ethics = () => {
                 <div className="space-y-3">
                   <div className="flex items-start space-x-2">
                     <div className="w-2 h-2 rounded-full bg-blue-400 mt-2" />
-                    <span className="text-sm text-gray-400">This includes AI decisions regarding a player’s continuity or transfer (FCBarcelona.com, 2025).</span>
+                    <span className="text-sm text-gray-400">This includes AI decisions regarding a player&apos;s continuity or transfer (FCBarcelona.com, 2025).</span>
                   </div>
                   <div className="flex items-start space-x-2">
                     <div className="w-2 h-2 rounded-full bg-blue-400 mt-2" />
@@ -244,7 +244,7 @@ const Ethics = () => {
               <div className="bg-gray-900/50 rounded-xl p-8">
                 <h4 className="text-xl font-bold text-purple-400 mb-4">Financial Penalties</h4>
                 <p className="text-gray-300 mb-4 leading-relaxed">
-                  Fines for non-compliance can amount to €35 million or 7% of the company’s turnover in the previous financial year, whichever is higher (FCBarcelona.com, 2025).
+                  Fines for non-compliance can amount to €35 million or 7% of the company&apos;s turnover in the previous financial year, whichever is higher (FCBarcelona.com, 2025).
                 </p>
                 <div className="bg-red-900/30 border border-red-500/30 rounded-lg p-6">
                   <div className="text-4xl font-bold text-red-400 mb-2">€35M / 7%</div>

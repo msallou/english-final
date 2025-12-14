@@ -129,7 +129,7 @@ const Strategy = () => {
               AI is fundamentally changing how teams build their rosters. The
               process moves from relying solely on scout intuition to using
               data-driven insights for strategic decision-making (Playbook
-              Sports; Jacobs).
+              Sports, 2025; Jacobs, 2024).
             </p>
           </div>
 
@@ -164,9 +164,9 @@ const Strategy = () => {
             </h2>
             <p className="text-gray-400 text-center max-w-3xl mx-auto">
               AI systems analyze vast amounts of data from multiple sources,
-              providing an unprecedented level of insight into a player’s
+              providing an unprecedented level of insight into a player&apos;s
               potential and fit. This minimizes the risk of overlooking talent
-              due to human bias (Playbook Sports).
+              due to human bias (Playbook Sports, 2025).
             </p>
           </div>
 
@@ -222,7 +222,7 @@ const Strategy = () => {
                   The analytical speed of AI systems is a beneficial aspect
                   (Jacobs, 2024). AI-powered video analysis can process hours of
                   footage in minutes, automating event tagging and generating
-                  instant scouting reports (Playbook Sports).
+                  instant scouting reports (Playbook Sports, 2025).
                 </p>
                 <div className="space-y-2 text-sm">
                   <div className="flex items-center space-x-2 text-gray-400">
@@ -259,23 +259,23 @@ const Strategy = () => {
                 <p className="text-gray-300 leading-relaxed mb-4">
                   Predictive analytics can forecast a player&apos;s future
                   performance and development trajectory with remarkable
-                  accuracy (Playbook Sports). This helps teams invest in
+                  accuracy. This helps teams invest in
                   undervalued players before their market value skyrockets
-                  (Playbook Sports).
+                  (Playbook Sports, 2025).
                 </p>
                 <div className="space-y-2 text-sm">
                   <div className="flex items-center space-x-2 text-gray-400">
                     <div className="w-2 h-2 rounded-full bg-purple-400" />
                     <span>
                       AI models predict potential peak performance (Playbook
-                      Sports).
+                      Sports, 2025).
                     </span>
                   </div>
                   <div className="flex items-center space-x-2 text-gray-400">
                     <div className="w-2 h-2 rounded-full bg-purple-400" />
                     <span>
                       Risk analysis includes predicting how well a player might
-                      fit into different tactical systems (Playbook Sports).
+                      fit into different tactical systems (Playbook Sports, 2025).
                     </span>
                   </div>
                   <div className="flex items-center space-x-2 text-gray-400">
@@ -327,8 +327,8 @@ const Strategy = () => {
                     </div>
                     <p className="text-gray-400 text-sm">
                       NLP processes subjective assessments like player attitude,
-                      character, team fit, and alignment with team philosophy
-                      (Gordon, 2025). Scout reports must include qualitative
+                      character, team fit, and alignment with team philosophy. 
+                      Scout reports must include qualitative
                       data alongside quantitative metrics like pass percentages
                       (Gordon, 2025).
                     </p>
@@ -341,7 +341,7 @@ const Strategy = () => {
                     <p className="text-gray-400 text-sm">
                       Scout Advisor confirms that clubs are never going to sign
                       a player with data alone, but never without resorting to
-                      data either (Gordon, 2025). This ensures better decisions
+                      data either. This ensures better decisions
                       on multi-million-dollar investments (Gordon, 2025).
                     </p>
                   </div>
@@ -352,8 +352,8 @@ const Strategy = () => {
                     </div>
                     <p className="text-gray-400 text-sm">
                       The process of extracting qualitative information was
-                      previously much slower than accessing quantitative data
-                      (Gordon, 2025). The AI solves the &quot;avalanche of
+                      previously much slower than accessing quantitative data.
+                      The AI solves the &quot;avalanche of
                       paperwork&quot; that plagued the club (Gordon, 2025).
                     </p>
                   </div>
@@ -425,7 +425,7 @@ const Strategy = () => {
             <p className="text-gray-300 text-center mb-8 max-w-3xl mx-auto leading-relaxed">
               AI informs the business side of player acquisition, helping clubs
               maximize their budget and avoid costly mistakes in the transfer
-              market (Playbook Sports).
+              market (Playbook Sports, 2025).
             </p>
 
             <div className="grid md:grid-cols-3 gap-6">
@@ -439,7 +439,7 @@ const Strategy = () => {
                 <p className="text-sm text-gray-400 text-center">
                   Advanced algorithms can predict how a player&apos;s value
                   might change over time, helping clubs decide the optimal time
-                  to buy, sell, or renew contracts (Playbook Sports).
+                  to buy, sell, or renew contracts (Playbook Sports, 2025).
                 </p>
               </div>
 
@@ -453,7 +453,7 @@ const Strategy = () => {
                 <p className="text-sm text-gray-400 text-center">
                   Data-driven assessment of player worth ensures competitive yet
                   financially sustainable contract offers, ensuring better
-                  return on investment (ROI) for acquisitions (Playbook Sports).
+                  return on investment (ROI) for acquisitions (Playbook Sports, 2025).
                 </p>
               </div>
 
@@ -467,7 +467,7 @@ const Strategy = () => {
                 <p className="text-sm text-gray-400 text-center">
                   AI helps optimize scouting resources by identifying
                   undervalued talent markets and regions most likely to produce
-                  compatible players (Playbook Sports). This replaces the long
+                  compatible players (Playbook Sports, 2025). This replaces the long
                   trips previously undertaken (FCBarcelona.com, 2025).
                 </p>
               </div>

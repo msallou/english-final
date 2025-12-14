@@ -37,7 +37,7 @@ const References = () => {
       title: 'The Application of Artificial Intelligence in Football Risk Prediction',
       authors: 'Zhang, L., et al.',
       journal: 'PMC Research Article (ANN and WSN model)',
-      year: '2025',
+      year: '2022',
       description:
         'Demonstrates an ANN-WSN system that predicts injury risk using wearable sensor data, achieving 99.6 percent precision for early detection of high-risk conditions.',
       type: 'Scholarly',
@@ -90,7 +90,7 @@ const References = () => {
     {
       title: 'Top 10 Ways AI Is Revolutionizing Player Scouting and Recruitment',
       source: 'Playbook Sports',
-      author: 'Playbook Staff',
+      author: 'Dr. Marcus Johnson',
       year: '2025',
       description:
         'Breaks down how AI transforms scouting through predictive analytics, psychological profiling, development planning, and data-driven recruitment pipelines.',
@@ -100,7 +100,7 @@ const References = () => {
     {
       title: 'Risks and Benefits of AI Use in Football',
       source: 'Sports Ethics Journal / FC Data Ethics Report',
-      author: 'Various',
+      author: 'Álvaro González',
       year: '2024',
       description:
         'Examines the ethical issues in AI deployment including data privacy, algorithmic bias, opaque decision systems, and career-impact risks.',
@@ -200,7 +200,7 @@ const References = () => {
                   </Link>
 
                   <div className="text-sm text-gray-400 mb-4">
-                    <span className="font-semibold">{ref.source}</span> • {ref.year}
+                    <span className="font-semibold">{ref.author} • </span>{ref.source} • {ref.year}
                   </div>
 
                   <p className="text-gray-300 leading-relaxed">{ref.description}</p>
