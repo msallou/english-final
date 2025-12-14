@@ -1,7 +1,13 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable react-hooks/static-components */
+"use client"
+
 import { BookOpen, FileText, Mail, MessageSquare } from 'lucide-react';
 import Link from 'next/link';
+import { useState } from 'react';
 
 const References = () => {
+  const [view, setView] = useState<'visual' | 'mla'>('mla');
   const scholarlyReferences = [
     {
       title: 'Performance and Healthcare Analysis in Elite Sports Teams Using Artificial Intelligence: A Scoping Review',
@@ -109,11 +115,34 @@ const References = () => {
     },
   ];
 
+  const ScholarlyMLA = ({ refs }: { refs: any[] }) => (
+  <ul className="space-y-4 text-gray-300 text-sm leading-relaxed">
+    {refs.map((r, i) => (
+      <li key={i}>
+        {r.authors}. “{r.title}.” <i>{r.journal}</i>, {r.year},
+        <a href={r.link} className="text-blue-400 ml-1 underline">{r.link}</a>.
+      </li>
+    ))}
+  </ul>
+);
+
+const PopularMLA = ({ refs }: { refs: any[] }) => (
+  <ul className="space-y-4 text-gray-300 text-sm leading-relaxed">
+    {refs.map((r, i) => (
+      <li key={i}>
+        {r.author}. “{r.title}.” <i>{r.source}</i>, {r.year},
+        <a href={r.link} className="text-purple-400 ml-1 underline">{r.link}</a>.
+      </li>
+    ))}
+  </ul>
+);
+
+
   return (
     <div className={`relative pt-20 transition-opacity duration-1000 opacity-100`}>
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
+          <div className="text-center mb-5">
             <div className="inline-flex items-center space-x-2 mb-6 px-6 py-2 bg-linear-to-r from-cyan-500/20 to-blue-500/20 rounded-full border border-cyan-500/30">
               <BookOpen className="text-cyan-400" size={20} />
               <span className="text-cyan-400 text-sm font-semibold tracking-wider uppercase">Resources</span>
@@ -127,6 +156,15 @@ const References = () => {
               Complete bibliography of scholarly and popular sources used to build this comprehensive analysis of AI in
               football
             </p>
+          </div>
+
+          <div className="flex justify-center mb-5">
+            <button
+              onClick={() => setView(view === 'visual' ? 'mla' : 'visual')}
+              className="px-6 py-2 rounded-full border border-gray-500/40 text-sm font-semibold hover:bg-gray-800/60 transition"
+            >
+              {view === 'visual' ? 'View MLA Format' : 'View Visual Format'}
+            </button>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8 mb-12">
@@ -150,7 +188,7 @@ const References = () => {
               </span>
             </h2>
 
-            <div className="space-y-6">
+            {/* <div className="space-y-6">
               {scholarlyReferences.map((ref, index) => (
                 <div
                   key={index}
@@ -173,7 +211,37 @@ const References = () => {
                   <p className="text-gray-300 leading-relaxed">{ref.description}</p>
                 </div>
               ))}
-            </div>
+            </div> */}
+            {view === 'visual' ? (
+              <div className="space-y-6">
+                {scholarlyReferences.map((ref, index) => (
+                  <div
+                  key={index}
+                  className="bg-linear-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700/50 hover:border-blue-500/50 transition-all duration-500 hover:scale-102 animate-fade-in"
+                  style={{ animationDelay: `${index * 50}ms` }}
+                >
+                  <div className="flex items-start justify-between mb-4">
+                    <span className="px-3 py-1 rounded-full text-xs font-semibold bg-blue-500/20 text-blue-400 border border-blue-500/30">
+                      {ref.type}
+                    </span>
+                  </div>
+                  <Link href={ref.link} target="_blank" rel="noopener noreferrer">
+                    <h3 className="text-xl font-bold mb-3 text-blue-400 underline underline-offset-3">{ref.title}</h3>
+                  </Link>
+
+                  <div className="text-sm text-gray-400 mb-4">
+                    <span className="font-semibold">{ref.authors}</span> • {ref.journal} • {ref.year}
+                  </div>
+
+                  <p className="text-gray-300 leading-relaxed">{ref.description}</p>
+                </div>
+                ))}
+              </div>
+            ) : (
+              <ScholarlyMLA refs={scholarlyReferences} />
+            )}
+
+
           </div>
 
           <div className="mb-20">
@@ -183,7 +251,7 @@ const References = () => {
               </span>
             </h2>
 
-            <div className="space-y-6">
+            {/* <div className="space-y-6">
               {popularReferences.map((ref, index) => (
                 <div
                   key={index}
@@ -206,7 +274,38 @@ const References = () => {
                   <p className="text-gray-300 leading-relaxed">{ref.description}</p>
                 </div>
               ))}
-            </div>
+            </div> */}
+
+              {view === 'visual' ? (
+                <div className="space-y-6">
+                  {popularReferences.map((ref, index) => (
+                    <div
+                  key={index}
+                  className="bg-linear-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700/50 hover:border-purple-500/50 transition-all duration-500 hover:scale-102 animate-fade-in"
+                  style={{ animationDelay: `${index * 50}ms` }}
+                >
+                  <div className="flex items-start justify-between mb-4">
+                    <span className="px-3 py-1 rounded-full text-xs font-semibold bg-purple-500/20 text-purple-400 border border-purple-500/30">
+                      {ref.type}
+                    </span>
+                  </div>
+                  <Link href={ref.link} target="_blank" rel="noopener noreferrer">
+                    <h3 className="text-xl font-bold mb-3 text-purple-400 underline underline-offset-3">{ref.title}</h3>
+                  </Link>
+
+                  <div className="text-sm text-gray-400 mb-4">
+                    <span className="font-semibold">{ref.author} • </span>{ref.source} • {ref.year}
+                  </div>
+
+                  <p className="text-gray-300 leading-relaxed">{ref.description}</p>
+                </div>
+                  ))}
+                </div>
+              ) : (
+                <PopularMLA refs={popularReferences} />
+              )}
+
+
           </div>
         </div>
       </section>
