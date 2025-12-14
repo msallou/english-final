@@ -151,11 +151,6 @@ const PopularMLA = ({ refs }: { refs: any[] }) => (
             <h1 className="text-5xl sm:text-6xl font-bold mb-6">
               Works Cited
             </h1>
-
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
-              Complete bibliography of scholarly and popular sources used to build this comprehensive analysis of AI in
-              football
-            </p>
           </div>
 
           <div className="flex justify-center mb-5">
