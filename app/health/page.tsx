@@ -11,7 +11,7 @@ const Health = () => {
   // Mapping Source names to be used in the JSX (matching your annotated bibliography)
   const sourceMapping = {
     ESPN: "Ogden, 2021", // Source 2
-    Qiao: "Qiao, 2025", // Source 10
+    Qiao: "Qiao, 2022", // Source 10
     Jacobs: "Jacobs, 2024", // Source 1
     Munoz: "Munoz-Macho et al., 2024", // Source 7
   };
@@ -67,8 +67,8 @@ const Health = () => {
       category: "Biomechanics",
       items: [
         "Movement asymmetry (Munoz-Macho et al., 2024)",
-        "Joint angles (Qiao)",
-        "Force distribution (Qiao)",
+        "Joint angles (Qiao, 2022)",
+        "Force distribution (Qiao, 2022)",
         "Biomechanical Modeling (Munoz-Macho et al., 2024)",
       ],
     },
@@ -79,7 +79,7 @@ const Health = () => {
         "Blood markers (Munoz-Macho et al., 2024)",
         "Sleep quality (Munoz-Macho et al., 2024)",
         "Wellness indicators (Munoz-Macho et al., 2024)",
-        "Heart rate (Jacobs, 2024; Qiao, 2025)",
+        "Heart rate (Jacobs, 2024; Qiao, 2022)",
       ],
     },
     // Source 2: Zone7 Alerts / Source 1: Reduced Practice
@@ -170,7 +170,7 @@ const Health = () => {
                     <p className="text-gray-400 text-sm">
                       A depleted squad can lead to negative results, costing the
                       coach their job (Ogden, 2021). Long-term injuries can end
-                      a player&apos;s career (Qiao). Preventing injuries is
+                      a player&apos;s career (Qiao, 2022). Preventing injuries is
                       arguably the most important challenge facing any coach in
                       the pursuit of marginal gains (Ogden, 2021).
                     </p>
@@ -241,7 +241,7 @@ const Health = () => {
 
           <div className="bg-linear-to-r from-cyan-900/30 to-blue-900/30 border border-cyan-500/30 rounded-xl p-12 mb-20">
             <h2 className="text-3xl font-bold mb-6 text-center">
-              The Science of Risk Prediction (Qiao)
+              The Science of Risk Prediction (Qiao, 2022)
             </h2>
 
             <div className="grid md:grid-cols-2 gap-8 mb-8">
@@ -252,8 +252,8 @@ const Health = () => {
                 <p className="text-gray-300 leading-relaxed mb-4">
                   An advanced ANN algorithm, implemented with Wireless Sensor
                   Network (WSN) technology, is used to predict knee injury risk
-                  with exceptional precision (Qiao). The model achieved a
-                  $99.6\%$ precision rate (Qiao).
+                  with exceptional precision (Qiao, 2022). The model achieved a
+                  99.6% precision rate (Qiao, 2022).
                 </p>
                 <div className="bg-gray-900/50 rounded-lg p-6">
                   <div className="text-4xl font-bold text-cyan-400 mb-2">
@@ -264,7 +264,7 @@ const Health = () => {
                   </div>
                   <p className="text-xs text-gray-500">
                     The ANN model&apos;s risk prediction is 7.2% higher in
-                    comparison to the existing fuzzy logic model (Qiao).
+                    comparison to the existing fuzzy logic model (Qiao, 2022).
                   </p>
                 </div>
               </div>
@@ -276,7 +276,7 @@ const Health = () => {
                 <p className="text-gray-300 leading-relaxed mb-4">
                   AI predicts that a player may get injured in a few days due to
                   pressure, frequency of training, and exercise intensity
-                  (Qiao).
+                  (Qiao, 2022).
                 </p>
                 <div className="space-y-3">
                   <div className="flex items-start space-x-3">
@@ -290,7 +290,7 @@ const Health = () => {
                       </div>
                       <div className="text-xs text-gray-500">
                         Tight tops worn under the jersey contain GPS,
-                        accelerometers, gyroscopes, and related sensors (Qiao).
+                        accelerometers, gyroscopes, and related sensors (Qiao, 2022).
                       </div>
                     </div>
                   </div>
@@ -302,7 +302,7 @@ const Health = () => {
                       </div>
                       <div className="text-xs text-gray-500">
                         Life-saving IoT is implemented to avoid major risk,
-                        making football a safer sport (Qiao).
+                        making football a safer sport (Qiao, 2022).
                       </div>
                     </div>
                   </div>
@@ -318,7 +318,7 @@ const Health = () => {
                       <div className="text-xs text-gray-500">
                         Proper rest is given to the player after AI
                         identification, preventing career-ending injuries
-                        (Qiao).
+                        (Qiao, 2022).
                       </div>
                     </div>
                   </div>
@@ -401,7 +401,7 @@ const Health = () => {
                   Proactive
                 </div>
                 <div className="text-sm text-gray-400">
-                  Risk Management (Qiao)
+                  Risk Management (Qiao, 2022)
                 </div>
               </div>
             </div>

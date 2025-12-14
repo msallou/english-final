@@ -39,7 +39,7 @@ export default function Home() {
       description: `Predictive injury modeling using deep learning. Getafe achieved a 66% reduction in non-contact injuries (Ogden, 2021).`,
       color: "from-green-500 to-emerald-500",
       stat: "99.6%",
-      statLabel: `Prediction Precision (Qiao)`,
+      statLabel: `Prediction Precision (Qiao, 2022)`,
       url: "/health",
     },
     {
