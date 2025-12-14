@@ -120,7 +120,7 @@ const References = () => {
     {refs.map((r, i) => (
       <li key={i}>
         {r.authors}. “{r.title}.” <i>{r.journal}</i>, {r.year},
-        <a href={r.link} className="text-blue-400 ml-1 underline">{r.link}</a>.
+        <Link href={r.link} target='_blank' className="text-blue-400 ml-1 underline">{r.link}</Link>.
       </li>
     ))}
   </ul>
@@ -131,7 +131,7 @@ const PopularMLA = ({ refs }: { refs: any[] }) => (
     {refs.map((r, i) => (
       <li key={i}>
         {r.author}. “{r.title}.” <i>{r.source}</i>, {r.year},
-        <a href={r.link} className="text-purple-400 ml-1 underline">{r.link}</a>.
+        <Link href={r.link} target='_blank' className="text-purple-400 ml-1 underline">{r.link}</Link>.
       </li>
     ))}
   </ul>
